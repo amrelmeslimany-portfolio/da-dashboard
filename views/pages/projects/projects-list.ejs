@@ -1,0 +1,110 @@
+<!-- Top Section -->
+<div class="row">
+    <div class="col-12 justify-content-md-between d-md-flex">
+        <h5 class="title text-uppercase mb-0">projects list</h5>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item text-capitalize active" aria-current="page">
+                    <a href="/projects">projects</a>
+                </li>
+                <li class="breadcrumb-item text-capitalize" aria-current="page">
+                    projects list
+                </li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+
+
+<!-- Middle Content -->
+<div class="row projects-list">
+    <div class="col-lg-12">
+        <div class="table-responsive">
+            <table class="table table-borderless table-nowrap align-middle table-border-separator mb-0">
+                <thead>
+                    <tr>
+                        <th scope="col" style="width: 100px">#</th>
+                        <th scope="col">Projects</th>
+                        <th scope="col">Due Date</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Team</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for( let index = 0; index < 9; index++ ) { %>
+                    <tr>
+                        <td><img src="/assets/img/aee-logo.png" alt="project logo" class="avatar-vmd"></td>
+                        <td>
+                            <strong class="text-truncate"><a href="javascript: void(0);" class="text-dark">New admin
+                                    Design</a></strong>
+                            <p class="text-muted mb-0 font-sm">It will be as simple as Occidental</p>
+                        </td>
+                        <td>15 Oct, 19</td>
+                        <td><span class="badge bg-success p-1">Completed</span></td>
+                        <td>
+                            <div class="avatar-group">
+
+                                <div class="avatar-group-item text-avatar">
+                                    <a href="javascript: void(0);" class="d-inline-block">
+                                        <div class="avatar-sm">
+                                            <span
+                                                class=" h-100 w-100 d-flex align-items-center justify-content-center rounded-circle font-md">
+                                                A
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="avatar-group-item">
+                                    <a href="javascript: void(0);" class="d-inline-block">
+                                        <img src="https://source.unsplash.com/60x60/?person" alt="person"
+                                            class="rounded-circle avatar-sm">
+                                    </a>
+                                </div>
+
+                                <div class="avatar-group-item">
+                                    <a href="javascript: void(0);" class="d-inline-block">
+                                        <img src="https://source.unsplash.com/60x60/?person" alt="person"
+                                            class="rounded-circle avatar-sm">
+                                    </a>
+                                </div>
+
+                                <div class="avatar-group-item text-avatar">
+                                    <a href="javascript: void(0);" class="d-inline-block">
+                                        <div class="avatar-sm">
+                                            <span
+                                                class=" h-100 w-100 d-flex align-items-center justify-content-center rounded-circle font-md">
+                                                <strong>S</strong>
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="dropdown">
+                                <a class="dropdown-toggle cursor-pointer text-dark" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <i class="fas fa-ellipsis-h font-xs"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Load More Button -->
+<%- include ("../../partials/loadmore-btn.ejs") %>

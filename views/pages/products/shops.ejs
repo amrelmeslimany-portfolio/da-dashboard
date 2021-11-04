@@ -1,0 +1,68 @@
+<!-- Top Section -->
+<div class="row">
+    <div class="col-12 justify-content-md-between d-md-flex">
+        <h5 class="title text-uppercase mb-0">shops</h5>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item text-capitalize active" aria-current="page">
+                    <a href="/products">ecommerce</a>
+                </li>
+                <li class="breadcrumb-item text-capitalize" aria-current="page">
+                    shops
+                </li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<!-- Middle Section or Content -->
+
+<div class="row products-shops g-4 mb-3">
+    <% for( let index = 0; index < 9; index++ ) { %>
+    <div class="col-xl-4 col-sm-6">
+        <div class="card rounded shadow border-0">
+            <div class="row">
+                <div class="col-xl-5">
+                    <div class="text-center p-4 border-end">
+                        <div class="avatar-md mx-auto mb-3 mt-1">
+                            <span
+                                class="h-100 w-100 d-flex align-items-center justify-content-center fw-bolder rounded-circle font-2rem">
+                                B
+                            </span>
+                        </div>
+                        <h5 class="text-truncate pb-1">Shop's</h5>
+                    </div>
+                </div>
+
+                <div class="col-xl-7">
+                    <div class="p-4 text-center text-xl-start">
+                        <div class="row">
+                            <div class="col-6">
+                                <div>
+                                    <p class="text-muted mb-2 text-truncate">Products</p>
+                                    <h5>112</h5>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div>
+                                    <p class="text-muted mb-2 text-truncate">Wallet Balance</p>
+                                    <h5>$13,575</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <a href="javascript: void(0);" class="text-decoration-underline text-reset">See Profile <i
+                                    class="fas fa-arrow-right font-xs"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <% } %>
+</div>
+
+
+<!-- Footer Content -->
+<%- include ("../../partials/loadmore-btn.ejs") %>

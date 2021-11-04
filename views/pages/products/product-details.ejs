@@ -1,0 +1,335 @@
+<% 
+
+    let productImgs = [
+        {
+            id:1,
+            src: "https://themesbrand.com/skote-django/layouts/assets/images/product/img-7.png"
+        },
+        {
+            id:2,
+            src: "https://themesbrand.com/skote-django/layouts/assets/images/product/img-8.png"
+        },
+        {
+            id:3,
+            src: "https://themesbrand.com/skote-django/layouts/assets/images/product/img-7.png"
+        },
+        {
+            id:4,
+            src: "https://themesbrand.com/skote-django/layouts/assets/images/product/img-8.png"
+        }
+    ]
+%>
+
+<!-- Top Section -->
+<div class="row">
+    <div class="col-12 justify-content-md-between d-md-flex">
+        <h5 class="title text-uppercase mb-0">product details</h5>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item text-capitalize active" aria-current="page">
+                    <a href="/products">ecommerce</a>
+                </li>
+                <li class="breadcrumb-item text-capitalize" aria-current="page">
+                    product details
+                </li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<!-- Middle Section or Content -->
+
+<div class="row product-details">
+    <div class="col-lg-12">
+        <div class="card rounded shadow border-0 mb-custom">
+            <div class="card-body rounded-bottom rounded-1">
+                <!-- Imgs & Abbreviation -->
+                <div class="row">
+                    <!-- Products Img -->
+                    <div class="col-xl-6">
+                        <div class="product-detail-imgs">
+                            <div class="row">
+                                <!-- Other Imgs -->
+                                <div class="col-md-2 col-sm-3 col-4">
+                                    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist"
+                                        aria-orientation="vertical">
+                                        <% productImgs.forEach(product => { %>
+                                        <button class="nav-link <%= product.id == 1 ? "active" : "" %>"
+                                            id="product-<%= product.id %>-tab" data-bs-toggle="pill"
+                                            data-bs-target="#product-<%= product.id %>" type="button" role="tab"
+                                            aria-controls="product-<%= product.id %>" aria-selected="true">
+                                            <img src="<%= product.src %>" class="rounded img-fluid mx-auto d-block"
+                                                alt="product">
+                                        </button>
+                                        <% }) %>
+                                    </div>
+                                </div>
+                                <!-- Img Preview -->
+                                <div class="col-md-7 offset-md-1 col-sm-9 col-8">
+                                    <div class="tab-content" id="v-pills-tabContent">
+                                        <% productImgs.forEach(product => { %>
+                                        <div class="tab-pane fade <%= product.id == 1 ? "active show" : "" %>"
+                                            id="product-<%= product.id %>" role="tabpanel"
+                                            aria-labelledby="product-<%= product.id %>-tab">
+                                            <div>
+                                                <img src="<%= product.src %>" class="d-block img-fluid mx-auto"
+                                                    alt="product">
+                                            </div>
+                                        </div>
+                                        <% }) %>
+                                    </div>
+                                    <div class="text-center">
+                                        <button class="btn  bg-primary mt-2 me-sm-1 anm-riple text-white">
+                                            <i class="fas fa-shopping-cart me-1 font-sm"></i>
+                                            add cart
+                                        </button>
+                                        <button class="btn  bg-success mt-2 anm-riple text-white">
+                                            <i class="fas fa-shopping-bag me-1 font-sm"></i>
+                                            buy now
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product Prices & Details etc... -->
+                    <div class="col-xl-6">
+                        <div class="mt-4 mt-xl-3">
+                            <div class="mt-4 mt-xl-3">
+                                <a href="javascript: void(0);" class="text-primary">Headphone</a>
+                                <h5 class="mt-1 mb-3">Wireless Headphone (Black)</h5>
+                                <p class="text-muted float-start me-3">
+                                    <span class="fas fa-star text-warning"></span>
+                                    <span class="fas fa-star text-warning"></span>
+                                    <span class="fas fa-star text-warning"></span>
+                                    <span class="fas fa-star text-warning"></span>
+                                    <span class="fas fa-star"></span>
+                                </p>
+                                <p class="text-muted mb-2">( 152 Customers Review )</p>
+                                <h6 class="text-success text-uppercase">20% Off</h6>
+                                <h6 class="mb-3">Price : <span class="text-muted me-1"><del class="font-sm">$240
+                                            USD</del></span>
+                                    <b>$225 USD</b></h6>
+                                <p class="text-muted mb-2">To achieve this, it would be necessary to have uniform
+                                    grammar pronunciation and more common words If several languages coalesce</p>
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <div>
+                                            <p class="text-muted"><i
+                                                    class="fas font-sm fa-unlink align-middle text-primary me-1"></i>
+                                                Wireless</p>
+                                            <p class="text-muted"><i
+                                                    class="fas font-sm fa-shapes align-middle text-primary me-1"></i>
+                                                Wireless Range : 10m</p>
+                                            <p class="text-muted"><i
+                                                    class="fas font-sm fa-battery-empty align-middle text-primary me-1"></i>
+                                                Battery life : 6hrs</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div>
+                                            <p class="text-muted"><i
+                                                    class="fas font-sm fa-volume-up align-middle text-primary me-1"></i>
+                                                Bass</p>
+                                            <p class="text-muted"><i
+                                                    class="fas font-sm fa-cog align-middle text-primary me-1"></i>
+                                                Warranty : 1 Year</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="product-color">
+                                    <h6>Color :</h6>
+                                    <a href="javascript: void(0);" class="active">
+                                        <div class="product-color-item border rounded">
+                                            <img src="<%= productImgs[0].src %>" alt="color" class="avatar-md">
+                                        </div>
+                                        <p>Black</p>
+                                    </a>
+                                    <a href="javascript: void(0);">
+                                        <div class="product-color-item border rounded">
+                                            <img src="<%= productImgs[0].src %>" alt="color" class="avatar-md">
+                                        </div>
+                                        <p>Blue</p>
+                                    </a>
+                                    <a href="javascript: void(0);">
+                                        <div class="product-color-item border rounded">
+                                            <img src="<%= productImgs[0].src %>" alt="color" class="avatar-md">
+                                        </div>
+                                        <p>Gray</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- whole details -->
+                <div class="mt-3">
+                    <h5 class="mb-3">Specifications :</h5>
+                    <div class="table-responsive">
+                        <table class="table mb-0 table-bordered">
+                            <tbody>
+                                <tr>
+                                    <th scope="row" style="width: 250px;">Category</th>
+                                    <td>Headphone</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Brand</th>
+                                    <td>JBL</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Color</th>
+                                    <td>Black</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Connectivity</th>
+                                    <td>Bluetooth</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Warranty Summary</th>
+                                    <td>1 Year</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- rating & reviews -->
+                <div class="mt-3">
+                    <h5>
+                        Reviews:
+                    </h5>
+                    <!-- Reviews Self -->
+                    <div class="d-flex py-3 border-bottom">
+                        <div class="flex-shrink-0 me-3">
+                            <img src="https://themesbrand.com/skote-django/layouts/assets/images/users/avatar-2.jpg"
+                                class="avatar-sm rounded-circle" alt="img">
+                        </div>
+                        <div class="flex-grow-1">
+                            <h6 class="mb-1">Ali Mohamed</h6>
+                            <p class="text-muted">Great Product! Thanks.</p>
+                            <ul class="list-inline float-sm-end mb-sm-0">
+                                <li class="list-inline-item">
+                                    <a href="javascript: void(0);"><i class="far fa-thumbs-up me-1"></i> Like</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="javascript: void(0);"><i class="far fa-comment-dots me-1"></i> Comment</a>
+                                </li>
+                            </ul>
+                            <div class="text-muted font-sm"><i class="far fa-calendar-alt text-primary me-1"></i> 5 hrs
+                                ago
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex py-3 border-bottom">
+                        <div class="flex-shrink-0 me-3">
+                            <img src="https://themesbrand.com/skote-django/layouts/assets/images/users/avatar-4.jpg"
+                                class="avatar-sm rounded-circle" alt="img">
+                        </div>
+                        <div class="flex-grow-1">
+                            <h6 class="mb-1">Any Name</h6>
+                            <p class="text-muted">To an English person, it will seem like simplified English, as a
+                                skeptical Cambridge
+                            </p>
+                            <ul class="list-inline float-sm-end mb-sm-0">
+                                <li class="list-inline-item">
+                                    <a href="javascript: void(0);"><i class="far fa-thumbs-up me-1"></i> Like</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="javascript: void(0);"><i class="far fa-comment-dots me-1"></i> Comment</a>
+                                </li>
+                            </ul>
+                            <div class="text-muted font-sm"><i class="far fa-calendar-alt text-primary me-1"></i> 5 hrs
+                                ago
+                            </div>
+
+                            <!-- Reply -->
+                            <div class="d-flex mt-4">
+                                <div class="flex-shrink-0 me-3">
+                                    <img src="https://themesbrand.com/skote-django/layouts/assets/images/users/avatar-2.jpg"
+                                        class="avatar-sm rounded-circle" alt="img">
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h6 class="mb-1">Ali Mohamed</h6>
+                                    <p class="text-muted">Their separate existence is a myth. For science, music, sport,
+                                        etc.</p>
+                                    <ul class="list-inline float-sm-end mb-sm-0">
+                                        <li class="list-inline-item">
+                                            <a href="javascript: void(0);"><i class="far fa-thumbs-up me-1"></i>
+                                                Like</a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="javascript: void(0);"><i class="far fa-comment-dots me-1"></i>
+                                                Comment</a>
+                                        </li>
+                                    </ul>
+                                    <div class="text-muted font-sm"><i
+                                            class="far fa-calendar-alt text-primary me-1"></i> 09 Oct, 2019
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- The last shouldn't have border -->
+                    <div class="d-flex pt-3">
+                        <div class="flex-shrink-0 me-3">
+                            <img src="https://images.unsplash.com/photo-1583195764036-6dc248ac07d9?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fG1hbnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                class="avatar-sm rounded-circle object-fit" alt="img">
+                        </div>
+                        <div class="flex-grow-1">
+                            <h6 class="mb-1">Belal Ahmed</h6>
+                            <p class="text-muted">Lorem ipsum dolor sit amet.</p>
+                            <ul class="list-inline float-sm-end mb-sm-0">
+                                <li class="list-inline-item">
+                                    <a href="javascript: void(0);"><i class="far fa-thumbs-up me-1"></i> Like</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="javascript: void(0);"><i class="far fa-comment-dots me-1"></i> Comment</a>
+                                </li>
+                            </ul>
+                            <div class="text-muted font-sm"><i class="far fa-calendar-alt text-primary me-1"></i> 07
+                                Oct, 2022
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-5">
+            <h5 class="mb-3">Recent product :</h5>
+
+            <!-- Recent Products -->
+            <div class="row">
+                <% for( let index = 0; index < 3; index++ ) { %>
+                <div class="col-xl-4 col-sm-6">
+                    <div class="card rounded shadow border-0 mb-3">
+                        <div class="card-body rounded-bottom rounded-1">
+                            <div class="row align-items-center">
+                                <div class="col-md-4">
+                                    <img src="<%= productImgs[0].src %>" alt="recent" class="img-fluid mx-auto d-block">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="text-center text-md-start pt-3 pt-md-0">
+                                        <h5 class="text-truncate"><a href="javascript: void(0);"
+                                                class="text-dark">Wireless Headphone</a></h5>
+                                        <p class="text-muted mb-4 font-sm">
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star"></i>
+                                        </p>
+                                        <h6 class="my-0"><span class="text-muted me-2"><del
+                                                    class="font-sm">$240</del></span> <b>$225</b></h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</div>

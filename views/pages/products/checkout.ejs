@@ -1,0 +1,294 @@
+<!-- Top Section -->
+<div class="row">
+    <div class="col-12 justify-content-md-between d-md-flex">
+        <h5 class="title text-uppercase mb-0">checkout</h5>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item text-capitalize active" aria-current="page">
+                    <a href="/products">ecommerce</a>
+                </li>
+                <li class="breadcrumb-item text-capitalize" aria-current="page">
+                    checkout
+                </li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<!-- Middle Section or Content -->
+
+<div class="row products-checkout mb-3">
+    <!-- Left Side -->
+    <div class="col-xl-2 col-sm-3">
+        <div class="nav flex-column nav-pills checkout-buttons mb-custom" id="v-pills-tab" role="tablist"
+            aria-orientation="vertical">
+            <button class="nav-link active shipping-btn" data-bs-toggle="pill" data-bs-target="#shipping-info"
+                type="button" role="tab" aria-controls="shipping-info" aria-selected="true">
+                <i class="fas font-2rem fa-truck-moving d-block mt-4 mb-2"></i>
+                <p class="fw-bold mb-4">Shipping Info</p>
+            </button>
+            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#payment-info" type="button" role="tab"
+                aria-controls="payment-info" aria-selected="false">
+                <i class="fas font-2rem fa-money-bill d-block mt-4 mb-2"></i>
+                <p class="fw-bold mb-4">Payment Info</p>
+            </button>
+            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#confirmarion-info" type="button" role="tab"
+                aria-controls="confirmarion-info" aria-selected="false">
+                <i class="fas font-2rem fa-clipboard-check d-block mt-4 mb-2"></i>
+                <p class="fw-bold mb-4">Confirmation</p>
+            </button>
+        </div>
+    </div>
+    <!-- Right Side -->
+    <div class="col-xl-10 col-sm-9">
+        <!-- Shippin & Payment & confirm -->
+        <div class="card rounded shadow border-0">
+            <div class="card-body rounded-bottom rounded-1">
+                <div class="tab-content" id="v-pills-tabContent">
+                    <!-- shipping info -->
+                    <div class="tab-pane fade show active" id="shipping-info" role="tabpanel"
+                        aria-labelledby="shipping-info-tab">
+                        <h5 class="card-title">Shipping information</h5>
+                        <p class="font-sm">Fill all information below</p>
+                        <hr>
+                        <!-- Form -->
+                        <form class="mt-3">
+                            <div class="form-group row mb-4">
+                                <label for="billing-name" class="col-md-2 col-form-label">Name</label>
+                                <div class="col-md-10">
+                                    <input type="text" class="form-control" id="billing-name"
+                                        placeholder="Enter your name">
+                                </div>
+                            </div>
+                            <div class="form-group row mb-4">
+                                <label for="billing-email-address" class="col-md-2 col-form-label">Email Address</label>
+                                <div class="col-md-10">
+                                    <input type="email" class="form-control" id="billing-email-address"
+                                        placeholder="Enter your email">
+                                </div>
+                            </div>
+                            <div class="form-group row mb-4">
+                                <label for="billing-phone" class="col-md-2 col-form-label">Phone</label>
+                                <div class="col-md-10">
+                                    <input type="text" class="form-control" id="billing-phone"
+                                        placeholder="Enter your Phone no.">
+                                </div>
+                            </div>
+                            <div class="form-group row mb-4">
+                                <label for="billing-address" class="col-md-2 col-form-label">Address</label>
+                                <div class="col-md-10">
+                                    <textarea class="form-control" id="billing-address" rows="3"
+                                        placeholder="Enter full address"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group row mb-4">
+                                <label class="col-md-2 col-form-label">Country</label>
+                                <input type="hidden" name="country" id="countryInput">
+                                <div class="col-md-10 countries-select">
+                                    <div class="dropdown">
+                                        <button class="btn border anm-riple w-100 text-start dropdown-toggle"
+                                            type="button" id="countrySelect" data-bs-toggle="dropdown"
+                                            aria-expanded="false">
+                                            <span>Select Country</span> <i
+                                                class="fas fa-chevron-down float-end mt-2 font-xs"></i>
+                                        </button>
+                                        <ul class="dropdown-menu w-100 rounded-0" style="max-height: 150px;"
+                                            aria-labelledby="countrySelect">
+                                            <li>
+                                                <h6 class="dropdown-header mb-2">Select Country <span
+                                                        class="spinner-border spinner-grow-sm text-primary float-end"></span>
+                                                </h6>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row mb-4">
+                                <label class="col-md-2 col-form-label">States</label>
+                                <input type="hidden" name="state" id="stateInput">
+                                <div class="col-md-10 states-select">
+                                    <div class="dropdown">
+                                        <button class="btn border anm-riple w-100 text-start dropdown-toggle"
+                                            type="button" id="stateSelect" data-bs-toggle="dropdown"
+                                            aria-expanded="false">
+                                            <span>Select State</span> <i
+                                                class="fas fa-chevron-down float-end mt-2 font-xs"></i>
+                                        </button>
+                                        <ul class="dropdown-menu w-100 rounded-0" style="max-height: 150px;"
+                                            aria-labelledby="stateSelect">
+                                            <li>
+                                                <h6 class="dropdown-header mb-2">Please Select Country
+                                                </h6>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row mb-0">
+                                <label for="example-textarea" class="col-md-2 col-form-label">Order Notes:</label>
+                                <div class="col-md-10">
+                                    <textarea class="form-control" id="example-textarea" rows="3"
+                                        placeholder="Write some note.."></textarea>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+
+                    <!-- payment info -->
+                    <div class="tab-pane fade" id="payment-info" role="tabpanel" aria-labelledby="payment-info-tab">
+                        <h5 class="card-title">Payment information</h5>
+                        <p class="font-sm">Fill all information below</p>
+                        <hr class="mb-3">
+
+                        <!-- Payment Method -->
+                        <div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input font-sm" type="radio" name="paymentoptionsRadio"
+                                    id="paymentoptionsRadio1" checked="">
+                                <label class="form-check-label cursor-pointer" for="paymentoptionsRadio1"><i
+                                        class="fab fa-cc-mastercard me-1 font-md align-text-bottom"></i> Credit / Debit
+                                    Card</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input font-sm" type="radio" name="paymentoptionsRadio"
+                                    id="paymentoptionsRadio2">
+                                <label class="form-check-label cursor-pointer" for="paymentoptionsRadio2"><i
+                                        class="fab fa-cc-paypal me-1 font-md align-text-bottom"></i> Paypal</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input font-sm" type="radio" name="paymentoptionsRadio"
+                                    id="paymentoptionsRadio3">
+                                <label class="form-check-label cursor-pointer" for="paymentoptionsRadio3"><i
+                                        class="far fa-money-bill-alt me-1 font-md align-text-bottom"></i> Cash on
+                                    Delivery</label>
+                            </div>
+                        </div>
+
+                        <!-- Information -->
+                        <h5 class="mt-3 mb-3 ">For card Payment</h5>
+
+                        <div class="p-4 border">
+                            <form>
+                                <div class="form-group mb-0">
+                                    <label class="mb-2" for="cardnumberInput">Card Number</label>
+                                    <input type="text" class="form-control" id="cardnumberInput"
+                                        placeholder="0000 0000 0000 0000">
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group mt-4 mb-0">
+                                            <label class="mb-2" for="cardnameInput">Name on card</label>
+                                            <input type="text" class="form-control" id="cardnameInput"
+                                                placeholder="Name on Card">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="form-group mt-4 mb-0">
+                                            <label class="mb-2" for="expirydateInput">Expiry date</label>
+                                            <input type="text" class="form-control" id="expirydateInput"
+                                                placeholder="MM/YY">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="form-group mt-4 mb-0">
+                                            <label class="mb-2" for="cvvcodeInput">CVV Code</label>
+                                            <input type="text" class="form-control" id="cvvcodeInput"
+                                                placeholder="Enter CVV Code">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- confirmation -->
+                    <div class="tab-pane fade" id="confirmarion-info" role="tabpanel"
+                        aria-labelledby="confirmarion-info-tab">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title mb-3">Order Summary</h5>
+                                <div class="table-responsive">
+                                    <table class="table align-middle mb-0 table-nowrap">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th scope="col">Product</th>
+                                                <th scope="col">Product Desc</th>
+                                                <th scope="col">Price</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row"><img
+                                                        src="https://themesbrand.com/skote-django/layouts/assets/images/product/img-1.png"
+                                                        alt="product-img" title="product-img" class="avatar-md"></th>
+                                                <td>
+                                                    <h6 class=" text-truncate"><a href="ecommerce-product-detail.html"
+                                                            class="text-dark">Half
+                                                            sleeve T-shirt (64GB) </a></h6>
+                                                    <p class="text-muted mb-0">$450 x 1</p>
+                                                </td>
+                                                <td>$450</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><img
+                                                        src="https://themesbrand.com/skote-django/layouts/assets/images/product/img-7.png"
+                                                        alt="product-img" title="product-img" class="avatar-md"></th>
+                                                <td>
+                                                    <h6 class=" text-truncate"><a href="ecommerce-product-detail.html"
+                                                            class="text-dark">Wireless Headphone </a></h6>
+                                                    <p class="text-muted mb-0">$225 x 1</p>
+                                                </td>
+                                                <td>$225</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <h6 class="m-0 text-end">Sub Total:</h6>
+                                                </td>
+                                                <td>
+                                                    $675
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3">
+                                                    <div class="bg-primary bg-opacity-10 p-3 rounded">
+                                                        <h5 class="text-primary mb-0"><i
+                                                                class="fas fa-shipping-fast me-2"></i> Shipping <span
+                                                                class="float-end">Free</span></h5>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <h6 class="m-0 text-end">Total:</h6>
+                                                </td>
+                                                <td>
+                                                    $675
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer buttons -->
+        <div class="row mt-4 footer-checkout-btns">
+            <div class="col-sm-6">
+                <a href="/ecommerce/cart"
+                    class="btn text-muted anm-riple dark-riple text-decoration-underline d-none d-sm-inline-block btn-link">
+                    <i class="fas fa-arrow-left font-xs me-1"></i> To Shopping Cart </a>
+            </div>
+            <div class="col-sm-6">
+                <div class="text-end">
+                    <button data-bs-target="#shipping-info" class="btn anm-riple btn-primary">
+                        <i class="fas fa-truck-moving font-sm me-1"></i> Proceed to Shipping </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

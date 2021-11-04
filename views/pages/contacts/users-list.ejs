@@ -1,0 +1,100 @@
+<!-- Top Section -->
+<div class="row">
+    <div class="col-12 justify-content-md-between d-md-flex">
+        <h5 class="title text-uppercase mb-0">users list</h5>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item text-capitalize active" aria-current="page">
+                    <a href="/contacts/users-list">contacts</a>
+                </li>
+                <li class="breadcrumb-item text-capitalize" aria-current="page">
+                    users list
+                </li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<!-- Middle Content -->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card shadow border-0">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-nowrap table-hover align-middle">
+                        <thead class="table-light">
+                            <tr>
+                                <th scope="col" style="width: 70px;">#</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Tags</th>
+                                <th scope="col">Projects</th>
+                                <th scope="col">Action</th>
+                            </tr>
+
+                        </thead>
+                        <tbody>
+                            <% for( let index = 1; index < 12; index++ ) { %>
+                            <tr>
+                                <td>
+                                    <div class="avatar-sm">
+                                        <span
+                                            class="h-100 w-100 d-flex align-items-center text-primary justify-content-center  bg-primary bg-opacity-10 rounded-circle">
+                                            A
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <strong><a href="javascript: void(0);" class="text-dark">Amr Mohamed</a>
+                                    </strong>
+                                    <p class="fa-sm text-muted">Front-End Developer</p>
+                                </td>
+                                <td>amr@hotmail.com</td>
+                                <td>
+                                    <div>
+                                        <a href="javascript: void(0);"
+                                            class="badge bg-primary font-xs text-white p-1 m-1">javascript</a>
+                                        <a href="javascript: void(0);"
+                                            class="badge bg-primary font-xs text-white p-1 m-1">bootstrap</a>
+                                    </div>
+                                </td>
+                                <td>
+                                    125
+                                </td>
+                                <td>
+                                    <ul class="list-inline mb-0">
+                                        <li class="list-inline-item px-2">
+                                            <a href="javascript: void(0);" title="Message"><i
+                                                    class="far font-md fa-comment-dots text-muted"></i></a>
+                                        </li>
+                                        <li class="list-inline-item px-2">
+                                            <a href="javascript: void(0);" title="Profile"><i
+                                                    class="far font-md fa-user-circle text-muted"></i></a>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <% } %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pagination -->
+    <div class="col-lg-12">
+        <ul class="pagination pagination-rounded mt-3 p-1 justify-content-center">
+            <li class="page-item disabled me-2">
+                <a class="page-link rounded-0"> <i class="fas fa-arrow-left"></i> </a>
+            </li>
+            <% for( let index = 0; index < 4; index++ ) { %>
+            <li class="page-item me-2 <%= index == 2 ? "active" : "" %>">
+                <a class="page-link" href="javascript: void(0);"><%= index + 1 %> </a></li>
+            <% } %>
+            <li class="page-item">
+                <a class="page-link rounded-0" href="javascript: void(0);"><i class="fas fa-arrow-right"></i></a>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,463 @@
+<!-- Top Section -->
+<div class="row">
+    <div class="col-12 justify-content-md-between d-md-flex">
+        <h5 class="title text-uppercase mb-0">kanban board</h5>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item text-capitalize active" aria-current="page">
+                    <a href="/tasks">tasks</a>
+                </li>
+                <li class="breadcrumb-item text-capitalize" aria-current="page">
+                    kanban board
+                </li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+
+<!-- Middle Content -->
+<div class="row kanban-tasks">
+    <!-- Upcoming -->
+    <div class="col-lg-4">
+        <div class="card shadow border-0 mb-4">
+            <div class="card-body">
+                <div class="dropdown float-end">
+                    <a class="dropdown-toggle cursor-pointer text-reset" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="fas fa-ellipsis-h font-sm"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end">
+                        <a class="dropdown-item" href="#">Edit</a>
+                        <a class="dropdown-item" href="#">Delete</a>
+                    </div>
+                </div>
+
+                <h6 class="card-title mb-4">
+                    Upcoming
+                </h6>
+
+
+                <!-- Tasks wrap  wr => wrap -->
+
+                <div id="wr-task-upcoming">
+                    <!-- Tasks List -->
+                    <div class="tasks-outer pb-2">
+                        <% for( let index = 1; index < 5; index++ ) { %>
+                        <div class="card shadow task-box mb-3" id="uptask-<%= index %>">
+                            <div class="card-body">
+                                <div class="dropdown float-end ms-2">
+                                    <a href="#" class="dropdown-toggle text-muted align-middle"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="fas fa-ellipsis-h font-sm"></i>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-end">
+                                        <a class="dropdown-item edittask-details" href="#" id="taskedit"
+                                            data-id="#uptask-<%= index %>" data-bs-toggle="modal"
+                                            data-bs-target=".bs-example-modal-lg">Edit</a>
+                                        <a class="dropdown-item deletetask" href="#"
+                                            data-id="#uptask-<%= index %>">Delete</a>
+                                    </div>
+                                </div> <!-- end dropdown -->
+                                <div class="float-end ms-2">
+                                    <span
+                                        class="badge rounded-pill bg-secondary bg-opacity-25 text-secondary font-xs task-status">Waiting</span>
+                                </div>
+                                <div>
+                                    <h6 class="mb-0 overflow-hidden"><a href="javascript: void(0);"
+                                            class="text-dark text-truncate task-name">Upcoming Task <%= index %> </a>
+                                    </h6>
+                                    <p class="text-muted mb-4 font-sm">14 Oct, 2019</p>
+                                </div>
+                                <div class="avatar-group float-start task-assigne">
+                                    <div class="avatar-group-item">
+                                        <a href="javascript: void(0);" class="d-inline-block">
+                                            <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80"
+                                                alt="" class="rounded-circle avatar-sm object-fit">
+                                        </a>
+                                    </div>
+                                    <div class="avatar-group-item">
+                                        <a href="javascript: void(0);" class="d-inline-block">
+                                            <img src="https://images.unsplash.com/photo-1546456073-92b9f0a8d413?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80"
+                                                alt="" class="rounded-circle avatar-sm object-fit">
+                                        </a>
+                                    </div>
+                                    <div class="avatar-group-item">
+                                        <a href="javascript: void(0);" class="d-inline-block">
+                                            <div class="avatar-sm">
+                                                <span
+                                                    class="h-100 w-100 d-flex align-items-center text-white justify-content-center  bg-primary rounded-circle">
+                                                    2+
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="text-end">
+                                    <h5 class="mb-0 task-budget">$145</h5>
+                                    <p class="mb-0 text-muted">Budget</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <% } %>
+                    </div>
+                    <!-- Add Tasks -->
+                    <div class="text-center d-grid">
+                        <a href="javascript: void(0);" class="btn btn-primary anm-riple addtask-btn"
+                            data-bs-toggle="modal" data-bs-target=".bs-example-modal-lg" data-id="#upcoming-task"><i
+                                class="fas fa-plus me-1 font-xs align-middle"></i> Add New</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Inprogress -->
+    <div class="col-lg-4">
+        <div class="card shadow border-0 mb-4">
+            <div class="card-body">
+                <div class="dropdown float-end">
+                    <a class="dropdown-toggle cursor-pointer text-reset" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="fas fa-ellipsis-h font-sm"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end">
+                        <a class="dropdown-item" href="#">Edit</a>
+                        <a class="dropdown-item" href="#">Delete</a>
+                    </div>
+                </div>
+
+                <h6 class="card-title mb-4">
+                    In Progress
+                </h6>
+
+
+                <!-- Tasks wrap  wr => wrap -->
+
+                <div id="wr-task-inprogress">
+                    <!-- Tasks List -->
+                    <div class="tasks-outer pb-2">
+                        <% for( let index = 1; index < 4; index++ ) { %>
+                        <div class="card shadow task-box mb-3" id="inptask-<%= index %>">
+                            <div class="card-body">
+                                <div class="dropdown float-end ms-2">
+                                    <a href="#" class="dropdown-toggle text-muted align-middle"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="fas fa-ellipsis-h font-sm"></i>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-end">
+                                        <a class="dropdown-item edittask-details" href="#" id="taskedit"
+                                            data-id="#inptask-<%= index %>" data-bs-toggle="modal"
+                                            data-bs-target=".bs-example-modal-lg">Edit</a>
+                                        <a class="dropdown-item deletetask" href="#"
+                                            data-id="#inptask-<%= index %>">Delete</a>
+                                    </div>
+                                </div> <!-- end dropdown -->
+                                <div class="float-end ms-2">
+                                    <span
+                                        class="badge rounded-pill bg-warning bg-opacity-25 text-warning font-xs task-status">Pending</span>
+                                </div>
+                                <div>
+                                    <h6 class="mb-0 overflow-hidden"><a href="javascript: void(0);"
+                                            class="text-dark task-name text-truncate">Inprogress <%= index %> </a></h6>
+                                    <p class="text-muted mb-4 font-sm">14 Oct, 2019</p>
+                                </div>
+                                <div class="avatar-group float-start task-assigne">
+                                    <div class="avatar-group-item">
+                                        <a href="javascript: void(0);" class="d-inline-block">
+                                            <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80"
+                                                alt="" class="rounded-circle avatar-sm object-fit">
+                                        </a>
+                                    </div>
+                                    <div class="avatar-group-item">
+                                        <a href="javascript: void(0);" class="d-inline-block">
+                                            <img src="https://images.unsplash.com/photo-1546456073-92b9f0a8d413?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80"
+                                                alt="" class="rounded-circle avatar-sm object-fit">
+                                        </a>
+                                    </div>
+                                    <div class="avatar-group-item">
+                                        <a href="javascript: void(0);" class="d-inline-block">
+                                            <div class="avatar-sm">
+                                                <span
+                                                    class="h-100 w-100 d-flex align-items-center text-white justify-content-center  bg-primary rounded-circle">
+                                                    2+
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="text-end">
+                                    <h5 class="mb-0 task-budget">$145</h5>
+                                    <p class="mb-0 text-muted">Budget</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <% } %>
+                    </div>
+                    <!-- Add Tasks -->
+                    <div class="text-center d-grid">
+                        <a href="javascript: void(0);" class="btn btn-primary anm-riple addtask-btn"
+                            data-bs-toggle="modal" data-bs-target=".bs-example-modal-lg" data-id="#upcoming-task"><i
+                                class="fas fa-plus me-1 font-xs align-middle"></i> Add New</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Completed -->
+    <div class="col-lg-4">
+        <div class="card shadow border-0 mb-4">
+            <div class="card-body">
+                <div class="dropdown float-end">
+                    <a class="dropdown-toggle cursor-pointer text-reset" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="fas fa-ellipsis-h font-sm"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end">
+                        <a class="dropdown-item" href="#">Edit</a>
+                        <a class="dropdown-item" href="#">Delete</a>
+                    </div>
+                </div>
+
+                <h6 class="card-title mb-4">
+                    Completed
+                </h6>
+
+
+                <!-- Tasks wrap  wr => wrap -->
+
+                <div id="wr-task-completed">
+                    <!-- Tasks List -->
+                    <div class="tasks-outer pb-2">
+                        <% for( let index = 1; index < 3; index++ ) { %>
+                        <div class="card shadow task-box mb-3" id="comtask-<%= index %>">
+                            <div class="card-body">
+                                <div class="dropdown float-end ms-2">
+                                    <a href="#" class="dropdown-toggle text-muted align-middle"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="fas fa-ellipsis-h font-sm"></i>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-end">
+                                        <a class="dropdown-item edittask-details" href="#" id="taskedit"
+                                            data-id="#comtask-<%= index %>" data-bs-toggle="modal"
+                                            data-bs-target=".bs-example-modal-lg">Edit</a>
+                                        <a class="dropdown-item deletetask" href="#"
+                                            data-id="#comtask-<%= index %>">Delete</a>
+                                    </div>
+                                </div> <!-- end dropdown -->
+                                <div class="float-end ms-2">
+                                    <span
+                                        class="badge rounded-pill bg-success bg-opacity-25 text-success font-xs task-status">Completed</span>
+                                </div>
+                                <div>
+                                    <h6 class="mb-0 overflow-hidden"><a href="javascript: void(0);"
+                                            class="text-dark task-name text-truncate">Completed <%= index %> </a></h6>
+                                    <p class="text-muted mb-4 font-sm">14 Oct, 2019</p>
+                                </div>
+                                <ul class="list-inline mb-3">
+                                    <li class="list-inline-item">
+                                        <a href="javascript: void(0)">
+                                            <img src="https://images.unsplash.com/photo-1635323392268-c92c4a5776f2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=355&q=80"
+                                                class="rounded" height="48" alt="img">
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="javascript: void(0)">
+                                            <img src="https://images.unsplash.com/photo-1593642634315-48f5414c3ad9?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1169&q=80"
+                                                class="rounded" height="48" alt="img">
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="javascript: void(0)">
+                                            <img src="https://images.unsplash.com/photo-1635403868664-179c789560a7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=787&q=80"
+                                                class="rounded" height="48" alt="img">
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="javascript: void(0)">
+                                            <img src="https://images.unsplash.com/photo-1635328471471-28dd69a0cb3e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1225&q=80"
+                                                class="rounded" height="48" alt="img">
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="avatar-group float-start task-assigne">
+                                    <div class="avatar-group-item">
+                                        <a href="javascript: void(0);" class="d-inline-block">
+                                            <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80"
+                                                alt="" class="rounded-circle avatar-sm object-fit">
+                                        </a>
+                                    </div>
+                                    <div class="avatar-group-item">
+                                        <a href="javascript: void(0);" class="d-inline-block">
+                                            <img src="https://images.unsplash.com/photo-1546456073-92b9f0a8d413?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80"
+                                                alt="" class="rounded-circle avatar-sm object-fit">
+                                        </a>
+                                    </div>
+                                    <div class="avatar-group-item">
+                                        <a href="javascript: void(0);" class="d-inline-block">
+                                            <div class="avatar-sm">
+                                                <span
+                                                    class="h-100 w-100 d-flex align-items-center text-white justify-content-center  bg-primary rounded-circle">
+                                                    2+
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="text-end">
+                                    <h5 class="mb-0 task-budget">$145</h5>
+                                    <p class="mb-0 text-muted">Budget</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <% } %>
+                    </div>
+                    <!-- Add Tasks -->
+                    <div class="text-center d-grid">
+                        <a href="javascript: void(0);" class="btn btn-primary anm-riple addtask-btn"
+                            data-bs-toggle="modal" data-bs-target=".bs-example-modal-lg" data-id="#upcoming-task"><i
+                                class="fas fa-plus me-1 font-xs align-middle"></i> Add New</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- Model Add Task -->
+<div id="modalForm" class="modal fade bs-example-modal-lg" tabindex="-1" aria-labelledby="myLargeModalLabel"
+    aria-modal="true" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title add-task-title">Add New Task</h5>
+                <h5 class="modal-title update-task-title">Update Task</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="NewtaskForm" role="form">
+                    <div class="form-group mb-3">
+                        <label for="taskname" class="col-form-label">Task Name<span class="text-danger">*</span></label>
+                        <div class="col-lg-12">
+                            <input id="taskname" name="taskname" type="text" class="form-control "
+                                placeholder="Enter Task Name..." required="">
+                        </div>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label class="col-form-label">Task Description</label>
+                        <div class="col-lg-12">
+                            <textarea id="taskdesc" class="form-control" name="taskdesc"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label class="col-form-label">Add Team Member<span class="text-danger">*</span></label>
+                        <ul class="list-unstyled user-list " id="taskassignee">
+                            <li>
+                                <div class="form-check form-check-primary mb-2 d-flex align-items-center">
+                                    <input class="form-check-input" type="checkbox" id="member-1" name="member[]">
+                                    <img src="https://themesbrand.com/skote-django/layouts/assets/images/users/avatar-1.jpg"
+                                        class="rounded-circle avatar-sm m-1" alt="">
+                                    <label class="form-check-label ms-2" for="member-1">Albert Rodarte</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check form-check-primary mb-2 d-flex align-items-center">
+                                    <input class="form-check-input" type="checkbox" id="member-2" name="member[]">
+                                    <img src="https://themesbrand.com/skote-django/layouts/assets/images/users/avatar-2.jpg"
+                                        class="rounded-circle avatar-sm m-1" alt="">
+                                    <label class="form-check-label ms-2" for="member-2">Hannah Glover</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check form-check-primary mb-2 d-flex align-items-center">
+                                    <input class="form-check-input" type="checkbox" id="member-3" name="member[]">
+                                    <img src="https://themesbrand.com/skote-django/layouts/assets/images/users/avatar-3.jpg"
+                                        class="rounded-circle avatar-sm m-1" alt="">
+                                    <label class="form-check-label ms-2" for="member-3">Adrian Rodarte</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check form-check-primary mb-2 d-flex align-items-center">
+                                    <input class="form-check-input" type="checkbox" id="member-4" name="member[]">
+                                    <img src="https://themesbrand.com/skote-django/layouts/assets/images/users/avatar-4.jpg"
+                                        class="rounded-circle avatar-sm m-1" alt="">
+                                    <label class="form-check-label ms-2" for="member-4">Frank Hamilton</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check form-check-primary mb-2 d-flex align-items-center">
+                                    <input class="form-check-input" type="checkbox" id="member-5" name="member[]">
+                                    <img src="https://themesbrand.com/skote-django/layouts/assets/images/users/avatar-5.jpg"
+                                        class="rounded-circle avatar-sm m-1" alt="">
+                                    <label class="form-check-label ms-2" for="member-5">Justin Howard</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check form-check-primary mb-2 d-flex align-items-center">
+                                    <input class="form-check-input" type="checkbox" id="member-6" name="member[]">
+                                    <img src="https://themesbrand.com/skote-django/layouts/assets/images/users/avatar-6.jpg"
+                                        class="rounded-circle avatar-sm m-1" alt="">
+                                    <label class="form-check-label ms-2" for="member-6">Michael Lawrence</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check form-check-primary mb-2 d-flex align-items-center">
+                                    <input class="form-check-input" type="checkbox" id="member-7" name="member[]">
+                                    <img src="https://themesbrand.com/skote-django/layouts/assets/images/users/avatar-7.jpg"
+                                        class="rounded-circle avatar-sm m-1" alt="">
+                                    <label class="form-check-label ms-2" for="member-7">Oliver Sharp</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check form-check-primary mb-2 d-flex align-items-center">
+                                    <input class="form-check-input" type="checkbox" id="member-8" name="member[]">
+                                    <img src="https://themesbrand.com/skote-django/layouts/assets/images/users/avatar-8.jpg"
+                                        class="rounded-circle avatar-sm m-1" alt="">
+                                    <label class="form-check-label ms-2" for="member-8">Richard Simpson</label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label class="col-form-label">Status<span class="text-danger">*</span></label>
+                        <div class="col-lg-12">
+                            <select class="form-select " id="TaskStatus" required="">
+                                <option value="" selected="">Choose..</option>
+                                <option value="Waiting">Waiting</option>
+                                <option value="Approved">Approved</option>
+                                <option value="Pending">Pending</option>
+                                <option value="Complete">Complete</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group mb-4">
+                        <label for="taskbudget" class="col-form-label">Budget<span class="text-danger">*</span></label>
+                        <div class="col-lg-12">
+                            <input id="taskbudget" name="taskbudget" type="number" placeholder="Enter Task Budget..."
+                                class="form-control" required="">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-10">
+                            <button type="button" class="btn btn-primary" id="addtask" style="display: block;">Create
+                                Task</button>
+                            <button type="button" class="btn btn-primary" id="updatetaskdetail"
+                                style="display: none;">Update Task</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>

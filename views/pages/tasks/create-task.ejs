@@ -1,0 +1,97 @@
+<!-- Top Section -->
+<div class="row">
+    <div class="col-12 justify-content-md-between d-md-flex">
+        <h5 class="title text-uppercase mb-0">create task</h5>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item text-capitalize active" aria-current="page">
+                    <a href="/tasks">tasks</a>
+                </li>
+                <li class="breadcrumb-item text-capitalize" aria-current="page">
+                    create task
+                </li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+
+<!-- Middle Content -->
+<div class="row mb-3 create-task-section">
+    <div class="col-lg-12">
+        <div class="card shadow border-0">
+            <div class="card-body">
+                <h6 class="card-title mb-3">Create New Task</h6>
+                <!-- Form of creating new task -->
+                <form class="form-repeater">
+                    <div>
+                        <div class="form-group row mb-4">
+                            <label for="taskname" class="col-form-label col-lg-2">Task Name</label>
+                            <div class="col-lg-10">
+                                <input id="taskname" name="taskname" type="text" class="form-control"
+                                    placeholder="Enter Task Name...">
+                            </div>
+                        </div>
+                        <div class="form-group row mb-4">
+                            <label class="col-form-label col-lg-2">Task Description</label>
+                            <div class="col-lg-10">
+                                <textarea class="form-control" id="taskdesc-editor" style="height: 600px;"
+                                    name="taskdesc" aria-hidden="true"
+                                    placeholder="Enter the description..."></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group row mb-4">
+                            <label class="col-form-label col-lg-2">Task Date</label>
+                            <div class="col-lg-10">
+                                <div class=" input-group">
+                                    <input type="date" class="form-control" placeholder="Start Date"
+                                        name="taskdate[][start]">
+                                    <input type="date" class="form-control" placeholder="End Date"
+                                        name="taskdate[][end]">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Team members inputs -->
+                        <div class="inner-repeater mb-4">
+                            <div class="form-group mb-0 row ">
+                                <label class="col-form-label col-lg-2">Add Team Member</label>
+                                <!-- Inputs self -->
+                                <div class="col-lg-10 ms-md-auto">
+                                    <div data-wrapp-id="1" class="mb-3 row align-items-center  wr-member-input">
+                                        <div class="col-md-6">
+                                            <input type="text" name="member[name]" class="inner form-control"
+                                                placeholder="Enter Name...">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mt-2 mt-md-0">
+                                                <input name="member[img]" class="form-control" type="file">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row justify-content-end">
+                                <div class="col-lg-10">
+                                    <input type="button" class="btn btn-success add-new-member-btn"
+                                        value="Add New Member">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row mb-4">
+                            <label for="taskbudget" class="col-form-label col-lg-2">Budget</label>
+                            <div class="col-lg-10">
+                                <input id="taskbudget" name="taskbudget" type="number" min="1"
+                                    placeholder="Enter Task Budget..." class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-end">
+                        <div class="col-lg-10">
+                            <button type="submit" class="btn btn-primary create-task-submit-btn">Create Task</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

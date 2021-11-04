@@ -1,0 +1,169 @@
+/* Content Body */
+#body-content {
+    background-color: $white;
+    overflow: hidden;
+    margin-#{$l}: 250px;
+    transition: 0.2s;
+
+    /* Add Margin */
+    &.toggle-margin {
+        margin-#{$l}: 70px;
+    }
+
+    .wrap-inner-body {
+        margin-top: 80px;
+        padding: 0.5rem;
+
+
+        .card {
+            .header {
+                background-color: $lightenPrimary;
+            }
+
+            .card-body {
+                .avatar-user {
+                    height: 5.5rem;
+                    width: 5.5rem;
+
+                    img {
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+
+        .parent-wrap {
+            .circle-avatar {
+                @include flex-center;
+                background-color: $primary;
+                width: 2.8rem;
+                height: 2.8rem;
+                padding: 1rem;
+                border-radius: 50%;
+                color: $white;
+                position: relative;
+                z-index: 1;
+
+                &::before {
+                    @include refraction;
+                    transform: rotate(45deg);
+                }
+
+                &::after {
+                    @include refraction;
+                    transform: rotate(45deg) translate(-25px, 0px);
+                    transition: 0.4s linear;
+                }
+            }
+
+            &:hover {
+                .circle-avatar {
+                    &::after {
+                        transform: rotate(45deg) translate(100px, 0px);
+                    }
+                }
+            }
+        }
+
+        .chart-card {
+            .btn-group {
+                button {
+
+                    &.active,
+                    &:hover {
+                        background-color: $primary;
+                        color: $white;
+                    }
+                }
+            }
+        }
+
+        .social-content {
+            .avatar-icon {
+                .wr-icon {
+                    background-color: $lightenPrimary;
+                    width: 2.6rem;
+                    height: 2.6rem;
+                    @include flex-center;
+
+                    i {
+                        color: map-get($socialColors, facebook);
+                        font-size: 1.3rem;
+                    }
+                }
+            }
+
+            .wr-social {
+                .wr-icon {
+                    span {
+                        width: 2rem;
+                        height: 2rem;
+                        @include flex-center;
+                        margin: 0 auto;
+
+                        @each $key,
+                        $value in $socialColors {
+                            &.#{$key}-av {
+                                background-color: $value;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .activity-content {
+            @include activity-style;
+
+        }
+
+        .statistics-content {
+            .progress {
+                height: 5px;
+            }
+        }
+
+        /* LN Start Create Article Page */
+        @import "../pages/create-article";
+        /* Finish Create Article Page */
+
+        /* LN Start Create Blog Page */
+        @import "../pages/create-blog";
+        /* Finish Create Blog Page */
+
+        /* LN Start Create Blog Page */
+        @import "../pages/blog-view";
+        /* Finish Create Blog Page */
+        /* LN Start Dashboard Blog Page */
+        @import "../pages/blog-dashboard";
+        /* Finish Dashboard Blog Page */
+        /* LN Start Chat Page */
+        @import "../pages/chat";
+        /* Finish Chat Page */
+        /* LN Start File Manager */
+        @import "../pages/file-manager";
+        /* Finish File Manager */
+        /* LN Start Products Page */
+        @import "../pages/products";
+        /* Finish Products Page */
+        /* LN Start email Page */
+        @import "../pages/email";
+        /* Finish email Page */
+        /* LN Start projects Page */
+        @import "../pages/projects";
+        /* Finish projects Page */
+        /* LN Start tasks Page */
+        @import "../pages/tasks";
+        /* Finish tasks Page */
+        /* LN Start contacts Page */
+        @import "../pages/contacts-users";
+        /* Finish contacts Page */
+        /* LN Start blogs Page */
+        @import "../pages/blogs";
+        /* Finish blogs Page */
+    }
+
+
+}
+
+/* Content Body */

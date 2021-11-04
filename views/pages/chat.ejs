@@ -1,0 +1,412 @@
+<!-- Top Section -->
+<div class="row">
+    <div class="col-12 justify-content-md-between d-md-flex">
+        <h5 class="title text-uppercase mb-0">chat</h5>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item text-capitalize active" aria-current="page"><a href="/">dashboard</a>
+                </li>
+                <li class="breadcrumb-item text-capitalize" aria-current="page">chat
+                </li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+
+<!-- Chat self -->
+<div class="d-lg-flex mb-2">
+    <div class="me-lg-4 chat-leftside">
+        <div class="py-4 border-bottom">
+            <div class="d-flex">
+                <div class="flex-shrink-0 align-self-center me-3">
+                    <img src="/assets/img/avatar.png" class="avatar-sm rounded-circle" alt="avatar">
+                </div>
+                <div class="flex-grow-1">
+                    <h6 class="mb-1 font-md">Amr Mohamed</h6>
+                    <p class="text-muted mb-0 font-sm"><i
+                            class="fas fa-circle text-success font-xs align-middle me-1"></i>Active</p>
+                </div>
+                <div class="align-self-center">
+                    <div class="dropdown">
+                        <span
+                            class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
+                        </span>
+                        <a class="text-muted dropdown-toggle cursor-pointer " id="dropdown-1" data-bs-toggle="dropdown"
+                            aria-expanded="true">
+                            <i class="fas fa-bell bell-anm"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdown-1"
+                            data-popper-placement="bottom-end">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Separated link</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="search-box py-4">
+            <div class="input-group input-group-sm d-flex">
+                <button class="btn border-0 anm-riple bg-primary" type="button" id="search"><i
+                        class="fas fa-search text-light font-xs"></i></button>
+                <input type="text" class="form-control bg-white border-0" placeholder="Search.."
+                    aria-label="Example text with button addon" aria-describedby="search">
+            </div>
+        </div>
+        <div class="chat-leftsidebar-nav">
+            <!-- Buttons -->
+            <div class="list-group list-group-horizontal w-100 text-center" id="list-tab" role="tablist">
+                <a class="list-group-item list-group-item-action anm-riple rounded-0 btn-sm border-0 active"
+                    id="list-home-list" data-bs-toggle="list" href="#list-home" role="tab" aria-controls="list-home">
+
+                    <i class="fas fa-comments d-sm-none"></i>
+                    <span class="d-none d-sm-block">Chat</span>
+
+                </a>
+                <a class="list-group-item list-group-item-action anm-riple rounded-0 btn-sm border-0"
+                    id="list-profile-list" data-bs-toggle="list" href="#list-profile" role="tab"
+                    aria-controls="list-profile">
+                    <i class="fas fa-users d-sm-none"></i>
+                    <span class="d-none d-sm-block">Groups</span>
+                </a>
+                <a class="list-group-item list-group-item-action anm-riple rounded-0 btn-sm border-0"
+                    id="list-messages-list" data-bs-toggle="list" href="#list-messages" role="tab"
+                    aria-controls="list-messages">
+                    <i class="fas fa-phone d-sm-none"></i>
+                    <span class="d-none d-sm-block">Contacts</span>
+                </a>
+            </div>
+            <!-- Pants -->
+            <div class="tab-content py-4" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+                    <h6 class="mb-2 font-sm">Recent</h6>
+
+                    <div class="list-group chat-users-list" data-simplebar style="max-height: 410px;">
+                        <% for( let index = 0; index < 8; index++ ) { %>
+                        <% if (index == 2) { %>
+                        <a href="javascript: void(0);" class="list-group-item list-group-item-action active"
+                            aria-current="true">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0 align-self-center me-2">
+                                    <i class="fas fa-circle font-xs text-success"></i>
+                                </div>
+                                <div class="flex-shrink-0 align-self-center me-3">
+                                    <img src="assets/img/avatar.png" class="rounded-circle avatar-sm" alt="avatar">
+                                </div>
+
+                                <div class="flex-grow-1 overflow-hidden">
+                                    <h6 class="text-truncate font-md mb-1 text-dark">Amr Mohamed</h6>
+                                    <p class="text-truncate text-muted mb-0 font-sm">Hey! there I'm available</p>
+                                </div>
+                                <div class="font-xs text-nowrap text-muted"><%= index + 5 %> min</div>
+                            </div>
+                        </a>
+                        <% } else { %>
+                        <a href="javascript: void(0);" class="list-group-item list-group-item-action"
+                            aria-current="true">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0 align-self-center me-2">
+                                    <i class="fas fa-circle font-xs text-secondary"></i>
+                                </div>
+                                <div class="flex-shrink-0 align-self-center me-3">
+                                    <img src="assets/img/avatar.png" class="rounded-circle avatar-sm" alt="avatar">
+                                </div>
+
+                                <div class="flex-grow-1 overflow-hidden">
+                                    <h6 class="text-truncate font-md mb-1 text-dark">Tarek Saad</h6>
+                                    <p class="text-truncate text-muted mb-0 font-sm">Hey! there I'm available</p>
+                                </div>
+                                <div class="font-xs text-nowrap text-muted"><%= index + 5 %> min</div>
+                            </div>
+                        </a>
+                        <% } %>
+                        <% } %>
+                    </div>
+
+                </div>
+                <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+                    <h6 class="mb-2 font-sm">Groups</h6>
+
+                    <div class="list-group chat-users-list" data-simplebar style="max-height: 410px;">
+                        <% for( let index = 0; index < 8; index++ ) { %>
+                        <a href="javascript: void(0);" class="list-group-item list-group-item-action"
+                            aria-current="true">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0 align-self-center me-3">
+                                    <img src="assets/img/avatar.png" class="rounded-circle avatar-sm" alt="avatar">
+                                </div>
+
+                                <div class="flex-grow-1 align-self-center overflow-hidden">
+                                    <h6 class="text-truncate font-md mb-0 text-dark">Group <%= index + 1 %> </h6>
+                                </div>
+                            </div>
+                        </a>
+                        <% } %>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
+                    <h6 class="mb-3 font-sm">Contacts</h6>
+                    <div data-simplebar style="max-height: 410px;">
+                        <% for( let i = 0; i < 4; i++ ) { %>
+                        <div class="contact-item">
+                            <div class="avatar-sm mb-3 text-center">
+                                <span
+                                    class="bg-primary bg-opacity-25 rounded-circle w-100 h-100 d-block text-capitalize text-primary">
+                                    <i class="align-middle font-md icon-number"><%= i + 1 %> </i>
+                                </span>
+                            </div>
+                            <div class="list-group chat-users-list">
+                                <% for( let index = 0; index < 2; index++ ) { %>
+                                <a href="javascript: void(0);" class="list-group-item list-group-item-action"
+                                    aria-current="true">
+                                    <div class="d-flex">
+                                        <div class="align-self-center overflow-hidden">
+                                            <h6 class="text-truncate font-md mb-0 text-dark">Amr Ali <%= index + 1 %>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                </a>
+                                <% } %>
+                            </div>
+                        </div>
+                        <% } %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="w-100 user-chat">
+        <div class="card rounded shadow border-0">
+            <!-- Chat Header -->
+            <div class="p-4 border-bottom">
+                <div class="row">
+                    <div class="col-md-4 col-9">
+                        <strong class="d-block">Amr Mohamed</strong>
+                        <p class="text-muted mb-0 font-sm"><i class="fas fa-circle text-success align-middle me-1"
+                                style="font-size: 8px;"></i>Active
+                            now</p>
+                    </div>
+                    <div class="col-md-8 col-3">
+                        <ul class="list-inline text-end mb-0">
+                            <li class="list-inline-item d-none d-sm-inline-block">
+                                <div class="dropdown">
+                                    <button class="btn nav-btn dropdown-toggle anm-riple dark-riple" type="button"
+                                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-end dropdown-menu-md ddm-search">
+                                        <form class="p-2">
+                                            <div class="form-group m-0">
+                                                <div class="input-group input-group-sm d-none d-md-flex">
+                                                    <button class="btn border-0 anm-riple bg-dark" type="button"
+                                                        id="search"><i
+                                                            class="fas fa-search text-light font-xs"></i></button>
+                                                    <input type="text" class="form-control bg-light border-0"
+                                                        placeholder="Search.."
+                                                        aria-label="Example text with button addon"
+                                                        aria-describedby="search">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-inline-item  d-none d-sm-inline-block">
+                                <div class="dropdown">
+                                    <button class="btn nav-btn dropdown-toggle anm-riple dark-riple" type="button"
+                                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fas fa-cog"></i>
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-end">
+                                        <a class="dropdown-item" href="#">View Profile</a>
+                                        <a class="dropdown-item" href="#">Clear chat</a>
+                                        <a class="dropdown-item" href="#">Muted</a>
+                                        <a class="dropdown-item" href="#">Delete</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="list-inline-item">
+                                <div class="dropdown">
+                                    <button class="btn nav-btn dropdown-toggle anm-riple dark-riple" type="button"
+                                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fas fa-ellipsis-h"></i>
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-end">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Chat Content -->
+            <div>
+                <!-- Chat display -->
+                <div class="p-3 chat-display">
+                    <ul class="list-unstyled mb-0" style="max-height: 480px;height: 480px;" data-simplebar>
+                        <li>
+                            <div class="chat-day">
+                                <span>Today</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="conversation-list">
+                                <div class="dropdown">
+                                    <a class="dropdown-toggle cursor-pointer text-dark" role="button"
+                                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="javascript: void(0);">Copy</a>
+                                        <a class="dropdown-item" href="javascript: void(0);">Save</a>
+                                        <a class="dropdown-item" href="javascript: void(0);">Forward</a>
+                                        <a class="dropdown-item" href="javascript: void(0);">Delete</a>
+                                    </div>
+                                </div>
+                                <div class="ctext-wrap">
+                                    <div class="conversation-name">Amr Mohamed</div>
+                                    <p>
+                                        Hello!
+                                    </p>
+                                    <p class="chat-time mb-0"><i class="fas fa-clock me-1"></i>10:00pm</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="right">
+                            <div class="conversation-list">
+                                <div class="dropdown">
+                                    <a class="dropdown-toggle cursor-pointer text-dark" role="button"
+                                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="javascript: void(0);">Copy</a>
+                                        <a class="dropdown-item" href="javascript: void(0);">Save</a>
+                                        <a class="dropdown-item" href="javascript: void(0);">Forward</a>
+                                        <a class="dropdown-item" href="javascript: void(0);">Delete</a>
+                                    </div>
+                                </div>
+                                <div class="ctext-wrap">
+                                    <div class="conversation-name">Any Name</div>
+                                    <p>
+                                        Hi,What's up man ? i was waiting for you.
+                                        Now where are you ?
+                                    </p>
+                                    <p class="chat-time mb-0"><i class="fas fa-clock me-1"></i>10:08pm</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="conversation-list">
+                                <div class="dropdown">
+                                    <a class="dropdown-toggle cursor-pointer text-dark" role="button"
+                                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="javascript: void(0);">Copy</a>
+                                        <a class="dropdown-item" href="javascript: void(0);">Save</a>
+                                        <a class="dropdown-item" href="javascript: void(0);">Forward</a>
+                                        <a class="dropdown-item" href="javascript: void(0);">Delete</a>
+                                    </div>
+                                </div>
+                                <div class="ctext-wrap">
+                                    <div class="conversation-name">Amr Mohamed</div>
+                                    <p>
+                                        I am good thanks for your question,now i am at Alex.
+                                    </p>
+                                    <p class="chat-time mb-0"><i class="fas fa-clock me-1"></i>10:15pm</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="last-message">
+                            <div class="conversation-list">
+                                <div class="dropdown">
+                                    <a class="dropdown-toggle cursor-pointer text-dark" role="button"
+                                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="javascript: void(0);">Copy</a>
+                                        <a class="dropdown-item" href="javascript: void(0);">Save</a>
+                                        <a class="dropdown-item" href="javascript: void(0);">Forward</a>
+                                        <a class="dropdown-item" href="javascript: void(0);">Delete</a>
+                                    </div>
+                                </div>
+                                <div class="ctext-wrap">
+                                    <div class="conversation-name">Amr Mohamed</div>
+                                    <p>
+                                        I will meeting you at Satarday,Okay?
+                                    </p>
+                                    <p class="chat-time mb-0"><i class="fas fa-clock me-1"></i>10:15pm</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="right">
+                            <div class="conversation-list">
+                                <div class="dropdown">
+                                    <a class="dropdown-toggle cursor-pointer text-dark" role="button"
+                                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="javascript: void(0);">Copy</a>
+                                        <a class="dropdown-item" href="javascript: void(0);">Save</a>
+                                        <a class="dropdown-item" href="javascript: void(0);">Forward</a>
+                                        <a class="dropdown-item" href="javascript: void(0);">Delete</a>
+                                    </div>
+                                </div>
+                                <div class="ctext-wrap">
+                                    <div class="conversation-name">Any Name</div>
+                                    <p>
+                                        Okay No problem.
+                                    </p>
+                                    <p class="chat-time mb-0"><i class="fas fa-clock me-1"></i>10:08pm</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Chat Input -->
+                <div class="p-3 chat-input-wrap border-top">
+                    <div class="row g-1">
+                        <div class="col">
+                            <div class="position-relative">
+                                <input type="text" class="form-control bg-light rounded-pill chat-input"
+                                    placeholder="Enter Message...">
+                                <div class="chat-input-links">
+                                    <ul class="list-inline mb-0 position-absolute top-50 translate-middle-y">
+                                        <li class="list-inline-item">
+                                            <a href="javascript: void(0);" title="Emoji"><i
+                                                    class="fas fa-smile"></i></a>
+                                        </li>
+                                        <li class="list-inline-item"><a href="javascript: void(0);" title="Images"><i
+                                                    class="fas fa-image"></i></a></li>
+                                        <li class="list-inline-item"><a href="javascript: void(0);" title="Add Files"><i
+                                                    class="fas fa-file"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <button type="submit" class="btn btn-primary rounded-pill chat-send anm-riple">
+                                <span class="d-none d-sm-inline-block me-2">Send</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

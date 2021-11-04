@@ -1,0 +1,67 @@
+<!-- Top Section -->
+<div class="row">
+    <div class="col-12 justify-content-md-between d-md-flex">
+        <h5 class="title text-uppercase mb-0">create article</h5>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item text-capitalize active" aria-current="page"><a href="/">dashboard</a>
+                </li>
+                <li class="breadcrumb-item text-capitalize" aria-current="page">create article
+                </li>
+            </ol>
+        </nav>
+    </div>
+</div>
+<!-- Left Section -->
+<div class="row mb-3">
+    <div class="col-lg-12">
+        <!-- inner top -->
+        <div class="card rounded shadow border-0">
+            <div class="card-body rounded-bottom rounded-1">
+                <form class="create-article-form">
+                    <div class="row mb-2">
+                        <label class="col-form-label col-lg-2">Article Img:</label>
+                        <div class="col-lg-10">
+                            <div class="droparea rounded-1 border-primary align-middle text-center">
+                                <i class="fas fa-upload text-black-50 mb-2" style="font-size: 30px;"></i>
+                                <h6 class="text-muted">Drag Cover Img For Article</h6>
+                                <button type="button" class="btn btn-light anm-riple dark-riple">Upload Img</button>
+                            </div>
+                            <input type="file" name="img" hidden id="uploadCover">
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <label for="articleTitle" class="col-form-label col-lg-2">Article Title:</label>
+                        <div class="col-lg-10">
+                            <input type="text" name="articleTitle" class="form-control"
+                                placeholder="Example Of Title...">
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <label for="articleContent" class="col-form-label col-lg-2">Article Content:</label>
+                        <div class="col-lg-10">
+                            <textarea type="text" name="articleBody" class="form-control article-body" rows="3"
+                                placeholder="Here You Write The Article Content..."></textarea>
+                        </div>
+                    </div>
+                    <div class="row mb-2 align-items-center">
+                        <label for="articleTags" class="col-form-label col-lg-2">Article Tags:</label>
+                        <div class="col-lg-10">
+                            <input type="text" class="form-control article-tags mb-1"
+                                placeholder="ex: tag, key, word...">
+                            <div class="tags-list d-flex gap-1 flex-wrap">
+                                <small class="text-muted ms-2">no tags</small>
+                            </div>
+                            <input type="hidden" name="articleTags">
+                        </div>
+                    </div>
+                    <div class="row justify-content-end">
+                        <div class="col-lg-10">
+                            <button type="submit" class="btn btn-primary anm-riple">Create</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

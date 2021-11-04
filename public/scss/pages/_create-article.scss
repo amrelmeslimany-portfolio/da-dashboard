@@ -1,0 +1,22 @@
+form.create-article-form {
+
+
+    .ck-editor__editable_inline {
+        min-height: 300px;
+        height: 300px;
+        overflow-y: auto;
+        scroll-behavior: none;
+        @include custom-scrollbar();
+    }
+
+    .tags-list {
+        .tag {
+            transition: 0.2s;
+
+            &:hover {
+                background-color: $red !important;
+                color: $white !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,75 @@
+<!-- Top Section -->
+<div class="row">
+    <div class="col-12 justify-content-md-between d-md-flex">
+        <h5 class="title text-uppercase mb-0">invoices list</h5>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item text-capitalize active" aria-current="page">
+                    <a href="/invoices">invoices</a>
+                </li>
+                <li class="breadcrumb-item text-capitalize" aria-current="page">
+                    invoices list
+                </li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+
+<!-- Middle Content -->
+<div class="row g-4">
+    <% for( let index = 0; index < 9; index++ ) { %>
+    <div class="col-xl-4 col-sm-6">
+        <div class="card shadow border-0">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="text-lg-center">
+                            <div class="avatar-vmd me-3 mx-lg-auto mb-3 mt-1 float-start float-lg-none">
+                                <% if (index%2 ==0) { %>
+                                <span
+                                    class="h-100 w-100 d-flex align-items-center text-primary justify-content-center bg-opacity-10 bg-primary rounded-circle font-md">
+                                    M
+                                </span>
+                                <% } else { %>
+                                <img src="/assets/img/avatar.png" class="rounded-circle img-fluid" alt="img">
+                                <% } %>
+                            </div>
+                            <h6 class="mb-1 text-truncate">Amr Mohamed Elmeslimany</h6>
+                            <a href="javascript: void(0);" class="text-muted">@AD</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-8">
+                        <div>
+                            <a href="/invoices/invoice-detail"
+                                class="d-block font-sm text-primary text-decoration-underline mb-2">Invoice
+                                #142<%= index + 50 %> </a>
+                            <h5 class="text-truncate mb-4 mb-lg-5">AD Dashboard UI</h5>
+                            <ul class="list-inline mb-0">
+                                <li class="list-inline-item me-3">
+                                    <small data-bs-toggle="tooltip" data-bs-placement="top"
+                                        data-bs-original-title="Amount"><i
+                                            class="fas font-sm fa-money-bill-alt me-1 text-muted"></i>
+                                        $<%= (index + 10) * 20 %></small>
+                                </li>
+                                <li class="list-inline-item">
+                                    <small data-bs-toggle="tooltip" data-bs-placement="top"
+                                        data-bs-original-title="Due Date"><i
+                                            class="fas font-sm fa-calendar-alt me-1 text-muted"></i> 10 Oct,
+                                        <%= index + 10 %></small>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <% } %>
+</div>
+
+
+<!-- Footer Content -->
+<%- include ("../../partials/loadmore-btn.ejs") %>

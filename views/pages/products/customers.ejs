@@ -1,0 +1,125 @@
+<% 
+
+    let headersTable = "# Username Phone/Email Address Rating WalletBalance JoiningDate Action".split(" ")
+
+%>
+
+
+
+<!-- Top Section -->
+<div class="row">
+    <div class="col-12 justify-content-md-between d-md-flex">
+        <h5 class="title text-uppercase mb-0">customers</h5>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item text-capitalize active" aria-current="page">
+                    <a href="/products">ecommerce</a>
+                </li>
+                <li class="breadcrumb-item text-capitalize" aria-current="page">
+                    customers
+                </li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<!-- Middle Section or Content -->
+
+<div class="row products-customers mb-3">
+    <div class="col-lg-12">
+        <div class="card rounded shadow border-0">
+            <div class="card-body rounded-bottom rounded-1">
+                <!-- Header customers -->
+                <div class="row mb-2 align-items-center">
+                    <div class="col-sm-7">
+                        <div class="search-box d-inline-block">
+                            <div class="input-group input-group-sm d-flex">
+                                <button class="btn border-0 anm-riple bg-primary" type="button" id="search"><i
+                                        class="fas fa-search text-light font-xs"></i></button>
+                                <input type="text" class="form-control bg-white border" placeholder="Search.."
+                                    aria-label="Example text with button addon" aria-describedby="search">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-5">
+                        <div class="text-sm-end">
+                            <button class="btn btn-primary btn-sm anm-riple mt-2 mt-sm-0">
+                                <i class="fas fa-plus me-1 font-xs"></i> Add New Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Content customers -->
+                <div class="table-responsive">
+                    <table class="table align-middle table-nowrap">
+                        <thead class="table-light">
+                            <tr>
+                                <% headersTable.forEach(head => { %>
+                                <th><%= head %></th>
+                                <% }) %>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% for( let index = 0; index < 15; index++ ) { %>
+                            <tr>
+                                <td>
+                                    <div class="form-check font-sm">
+                                        <input class="form-check-input" type="checkbox"
+                                            id="customerlistcheck<%= index+1 %> ">
+                                        <label class="form-check-label" for="customerlistcheck<%= index+1 %> "></label>
+                                    </div>
+                                </td>
+                                <td>Amr Elmeslimany</td>
+                                <td>
+                                    <p class="mb-1">325-250-1106</p>
+                                    <p class="mb-0">amr@email.us</p>
+                                </td>
+
+                                <td>2470 Egypt Street
+                                    Rosetta, NY 11714</td>
+                                <td><span class="badge bg-warning font-xs"><i class="fas fa-star me-1"></i> 4.2</span>
+                                </td>
+                                <td>$<%= (index + 1) * 234 %></td>
+                                <td><%= index +11 %> Oct, 2019</td>
+                                <td>
+                                    <div class="dropdown">
+                                        <a href="#" class="dropdown-toggle card-drop" data-bs-toggle="dropdown"
+                                            aria-expanded="false">
+                                            <i class="fas fa-ellipsis-h font-size-18"></i>
+                                        </a>
+                                        <ul class="dropdown-menu dropdown-menu-end">
+                                            <li><a href="#" class="dropdown-item"><i
+                                                        class="fas fa-pencil-alt font-sm text-success me-1"></i>
+                                                    Edit</a>
+                                            </li>
+                                            <li><a href="#" class="dropdown-item"><i
+                                                        class="fas fa-trash font-sm text-danger me-1"></i> Delete</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <% } %>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Pagination customers -->
+                <ul class="pagination pagination-rounded mb-2 justify-content-end">
+                    <li class="page-item disabled me-2">
+                        <a class="page-link rounded-0"> <i class="fas fa-arrow-left"></i> </a>
+                    </li>
+
+                    <% for( let index = 0; index < 5; index++ ) { %>
+                    <li class="page-item me-2 <%= index == 3 ? "active" : "" %>">
+                        <a class="page-link" href="javascript: void(0);"><%= index + 1 %> </a></li>
+                    <% } %>
+
+                    <li class="page-item">
+                        <a class="page-link rounded-0" href="javascript: void(0);"><i
+                                class="fas fa-arrow-right"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

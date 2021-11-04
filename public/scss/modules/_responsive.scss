@@ -1,0 +1,155 @@
+/* 
+
+    320px — 480px: Mobile devices
+    481px — 768px: iPads, Tablets
+    769px — 1024px: Small screens, laptops
+    1025px — 1200px: Desktops, large screens
+    1201px and more —  Extra large screens, TV
+
+*/
+
+
+
+// 1201px and more —  Extra large screens, TV
+@media (min-width: 1366px) {
+    .file-manager-sidbar {
+        max-width: 280px;
+        min-width: 280px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .chat-leftside {
+        min-width: 380px;
+    }
+
+    .file-manager-sidbar {
+        max-width: 245px;
+        min-width: 245px;
+    }
+}
+
+//  1025px — 1200px: Desktops, large screens
+@media (max-width: 1200px) {
+    .mb-custom {
+        margin-bottom: 1.5rem;
+    }
+
+    // Navbar
+    #top-navbar {
+        nav.wrap-nav {
+            &>div:first-child {
+                .logo {
+                    width: 268px;
+                }
+            }
+        }
+
+        .map-h-site {
+            display: none;
+        }
+
+        .profile-box {
+            .dropdown-toggle {
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {}
+
+@media (max-width: 1024px) {
+    #top-navbar {
+        nav.wrap-nav {
+            &>div:first-child {
+                .logo {
+                    width: 70px;
+                    padding: 0;
+
+                    span.align-middle {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    #vertical-menue {
+        width: 0;
+        height: auto !important;
+
+        &.wide-side-work {
+            width: 250px;
+            z-index: 3;
+        }
+    }
+
+    #body-content {
+        margin-#{$l}: 0;
+
+        &.toggle-margin {
+            margin-#{$l}: 0;
+        }
+    }
+}
+
+// 769px — 1024px: Small screens, laptops
+@media (min-width: 769px) and (max-width: 1024px) {}
+
+@media (max-width: 768px) {
+    #top-navbar {
+        .search-sm-box {
+            .dropdown-menu {
+                width: 250px;
+                transform: translate3d(-80px, 38px, 0px) !important;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .chat-leftside {
+        min-width: 300px;
+    }
+}
+
+@media (max-width: 520px) {
+    .chat-display {
+        ul {
+            li {
+                &.last-message {
+                    .conversation-list {
+                        &::after {
+                            display: none;
+                        }
+                    }
+                }
+
+                .dropdown-toggle {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+// 481px — 768px: iPads, Tablets
+@media (min-width: 481px) and (max-width: 768px) {}
+
+// 320px — 480px: Mobile devices
+@media (min-width: 320px) and (max-width: 480px) {}
+
+@media (max-width: 480px) {
+    .wrap-inner-body {
+        .card {
+            .card-body {
+                .avatar-user {
+                    margin-top: -1.5rem;
+                }
+            }
+        }
+    }
+}

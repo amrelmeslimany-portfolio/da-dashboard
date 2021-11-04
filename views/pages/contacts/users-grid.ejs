@@ -1,0 +1,59 @@
+<!-- Top Section -->
+<div class="row">
+    <div class="col-12 justify-content-md-between d-md-flex">
+        <h5 class="title text-uppercase mb-0">users grid</h5>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item text-capitalize active" aria-current="page">
+                    <a href="/contacts/users-grid">contacts</a>
+                </li>
+                <li class="breadcrumb-item text-capitalize" aria-current="page">
+                    users grid
+                </li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+
+<!-- Middle Content -->
+
+<div class="row g-4">
+    <% for( let index = 1; index < 13; index++ ) { %>
+    <div class="col-xl-3 col-lg-4 col-sm-6">
+        <div class="card shadow border-0 text-center">
+            <div class="card-body">
+                <div class="avatar-vmd mx-auto mb-4">
+                    <span
+                        class="h-100 w-100 d-flex align-items-center text-primary justify-content-center  bg-primary bg-opacity-10 rounded-circle">
+                        A
+                    </span>
+                </div>
+                <h5 class=" mb-1"><a href="javascript: void(0);" class="text-dark">Amr Mohamed</a></h5>
+                <p class="fa-sm text-muted">Front-End Developer</p>
+
+                <div>
+                    <a href="javascript: void(0);" class="badge bg-primary font-xs text-white m-1">javascript</a>
+                    <a href="javascript: void(0);" class="badge bg-primary font-xs text-white m-1">bootstrap</a>
+                </div>
+            </div>
+            <div class="card-footer bg-transparent border-light border-top">
+                <div class="d-flex">
+                    <div class="flex-fill">
+                        <a href="javascript: void(0);"><i class="far text-muted fa-comment-dots fa-sm"></i></a>
+                    </div>
+                    <div class="flex-fill">
+                        <a href="javascript: void(0);"><i class="fas text-muted fa-chart-pie fa-sm"></i></a>
+                    </div>
+                    <div class="flex-fill">
+                        <a href="javascript: void(0);"><i class="far text-muted fa-user-circle fa-sm"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <% } %>
+</div>
+
+
+<%- include ("../../partials/loadmore-btn.ejs") %>

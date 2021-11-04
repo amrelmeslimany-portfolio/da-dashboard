@@ -1,0 +1,29 @@
+// Colors
+$primary: var(--bs-primary);
+$lightenPrimary: lighten(#0d6efd, 35%);
+$dark: var(--bs-dark);
+$white: var(--bs-light);
+$clearWhite: white;
+$gray: var(--bs-gray);
+$gray-600: var(--bs-gray-600);
+$lightenGray: #f5f5f5;
+$socialColors: (facebook: #2b47ce,
+    twitter: #50A5F1,
+    instagram: var(--bs-pink));
+$avatarColors: ((#d63384 1),
+    (#0d6efd 2),
+    (#198754 3));
+$red: var(--bs-red); // Fonts
+$lato: 'Lato',
+sans-serif;
+$oswald: 'Oswald',
+sans-serif;
+
+
+// Size
+$nav-height: 72px;
+
+
+// Directions
+$r: right;
+$l: left;

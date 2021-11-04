@@ -1,0 +1,147 @@
+<!-- Top Section -->
+<div class="row">
+    <div class="col-12 justify-content-md-between d-md-flex">
+        <h5 class="title text-uppercase mb-0">add product</h5>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item text-capitalize active" aria-current="page">
+                    <a href="/products">ecommerce</a>
+                </li>
+                <li class="breadcrumb-item text-capitalize" aria-current="page">
+                    add product
+                </li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+
+
+<!-- Middle Section in content -->
+
+<div class="row add-product-section mb-3">
+    <div class="col-lg-12">
+        <div class="card rounded shadow border-0">
+            <div class="card-body rounded-bottom rounded-1">
+                <h5 class="card-title mb-1">Basic Information</h5>
+                <p class="font-sm text-muted mb-2">Fill all information below</p>
+                <hr>
+                <!-- Form -->
+                <form>
+                    <div class="row">
+                        <!-- Basic Information -->
+                        <div class="col-sm-6">
+                            <div class="mb-3">
+                                <label class="mb-1" for="productname">Product Name</label>
+                                <input id="productname" name="productname" type="text" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label class="mb-1" for="manufacturername">Manufacturer Name</label>
+                                <input id="manufacturername" name="manufacturername" type="text" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label class="mb-1" for="manufacturerbrand">Manufacturer Brand</label>
+                                <input id="manufacturerbrand" name="manufacturerbrand" type="text" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label class="mb-1" for="price">Price</label>
+                                <input id="price" name="price" type="text" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="mb-3">
+                                <label class="mb-1">Category</label>
+                                <input type="hidden" name="category">
+                                <div class="dropdown dr-show-text">
+                                    <button class="btn border anm-riple w-100 text-start dropdown-toggle" type="button"
+                                        id="categorySelect" data-bs-toggle="dropdown" data-bs-offset="0,-1"
+                                        aria-expanded="false">
+                                        <span>Select Category</span> <i
+                                            class="fas fa-chevron-down float-end mt-2 font-xs"></i>
+                                    </button>
+                                    <ul class="dropdown-menu w-100 rounded-0" style="max-height: 150px;"
+                                        aria-labelledby="categorySelect">
+                                        <li>
+                                            <span class="dropdown-item" data-categoryproduct="fashion">Fashion
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="dropdown-item" data-categoryproduct="electronic">Electronic
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="mb-1">Features</label>
+
+                                <input type="hidden" name="features">
+                                <div class="dropdown dr-show-text">
+                                    <button class="btn border anm-riple w-100 text-start dropdown-toggle" type="button"
+                                        id="featureSelect" data-bs-toggle="dropdown" data-bs-offset="0,-1"
+                                        aria-expanded="false">
+                                        <span>Select Feature</span> <i
+                                            class="fas fa-chevron-down float-end mt-2 font-xs"></i>
+                                    </button>
+                                    <ul class="dropdown-menu w-100 rounded-0" style="max-height: 150px;"
+                                        aria-labelledby="featureSelect">
+                                        <li>
+                                            <span class="dropdown-item" data-featureproduct="battrylife">battry life
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="dropdown-item" data-featureproduct="bass">bass
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <div class="mb-3">
+                                <label class="mb-1" for="productdesc">Product Description</label>
+                                <textarea class="form-control" id="productdesc" rows="4"></textarea>
+                            </div>
+
+                        </div>
+                        <!-- Upload Product Images -->
+                        <div class="col-sm-12 mb-3 mt-3">
+                            <h6>Upload Images</h6>
+                            <hr>
+                            <div class="dropzone mt-2" id="dropzone-product"></div>
+                        </div>
+
+                    </div>
+                    <h5 class="mb-1 mt-3">Meta Data</h5>
+                    <p class="font-sm text-muted mb-2">Fill all information below</p>
+                    <hr>
+                    <div class="row">
+                        <!-- Meta Data -->
+
+                        <div class="col-sm-6">
+                            <div class="mb-3">
+                                <label for="metatitle">Meta title</label>
+                                <input id="metatitle" name="productname" type="text" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label for="metakeywords">Meta Keywords</label>
+                                <input id="metakeywords" name="manufacturername" type="text" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="mb-3">
+                                <label for="metadescription">Meta Description</label>
+                                <textarea class="form-control" id="metadescription" rows="4"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-wrap gap-2">
+                        <button type="submit" class="btn btn-primary anm-riple">Save Changes</button>
+                        <button type="button" class="btn btn-secondary anm-riple">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

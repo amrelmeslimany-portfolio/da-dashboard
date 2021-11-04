@@ -1,0 +1,16 @@
+/* Blog View Card */
+.bl-view-modal {
+  .settings {
+    i {
+      cursor: pointer;
+    }
+  }
+  .avater-logo {
+    img {
+      width: 4.5rem;
+      height: 4.5rem;
+    }
+  }
+}
+/* Blog Desinging */
+@import "./partials/designing-blog";

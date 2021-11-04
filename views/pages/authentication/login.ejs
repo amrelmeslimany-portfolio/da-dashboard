@@ -1,0 +1,102 @@
+<div class="row justify-content-center login-page">
+    <div class="col-md-8 col-lg-6 col-xl-5">
+        <div class="card border-0 shadow overflow-hidden">
+            <div class="bg-primary bg-opacity-10">
+                <div class="row overflow-hidden">
+                    <div class="col-7">
+                        <div class="p-3 text-primary">
+                            <h5 class="text-primary">Welcome Back !</h5>
+                            <p class="mb-5">Sign in to continue to AD.</p>
+                        </div>
+                    </div>
+                    <div class="col-5 align-self-end">
+                        <img src="/assets/img/welcome.svg" class="img-fluid" alt="hello" draggable="false">
+                    </div>
+                </div>
+            </div>
+            <div class="card-body pt-0">
+                <div class="auth-logo">
+                    <a href="/">
+                        <div class="avatar-md profile-user-wid mb-2">
+                            <span
+                                class=" h-100 w-100 d-flex align-items-center justify-content-center rounded-circle bg-light">
+                                <img src="/assets/img/logo.png" alt="" class="rounded-circle" height="45">
+                            </span>
+                        </div>
+                    </a>
+                </div>
+                <div class="p-2">
+                    <form class="form-horizontal">
+
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="username" placeholder="Enter username">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Password</label>
+                            <div class="input-group auth-pass-inputgroup">
+                                <input type="password" class="form-control" placeholder="Enter password"
+                                    aria-label="Password" aria-describedby="password-addon">
+                                <button class="btn btn-light border" type="button" id="password-addon"><i
+                                        class="fas fa-eye"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="remember-check">
+                            <label class="form-check-label" for="remember-check">
+                                Remember me
+                            </label>
+                        </div>
+
+                        <div class="mt-3 d-grid">
+                            <button class="btn btn-primary waves-effect waves-light" type="submit">Log In</button>
+                        </div>
+
+                        <div class="mt-4 text-center">
+                            <h6 class=" mb-3">Sign in with</h6>
+
+                            <ul class="list-inline">
+                                <li class="list-inline-item">
+                                    <a href="javascript::void()" class="social-list-item facebook-sc">
+                                        <i class="fab fa-facebook-square"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="javascript::void()" class="social-list-item twitter-sc">
+                                        <i class="fab fa-twitter-square"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="javascript::void()" class="social-list-item instagram-sc">
+                                        <i class="fab fa-google-plus"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="mt-4 text-center">
+                            <a href="/authentication/recover-password" class="text-muted"><i
+                                    class="fas fa-lock font-xs me-1"></i> Forgot
+                                your password?</a>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+        <div class="mt-5 text-center">
+
+            <div>
+                <p>Don't have an account ? <a href="/authentication/register" class="fw-medium text-primary"> Signup now
+                    </a>
+                </p>
+                <p>© <script>
+                        document.write(new Date().getFullYear())
+                    </script> AD. Crafted with <i class="fas fa-heart text-danger"></i> by AEE</p>
+            </div>
+        </div>
+
+    </div>
+</div>

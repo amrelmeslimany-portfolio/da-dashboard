@@ -1,0 +1,146 @@
+<!-- Top Section -->
+<div class="row">
+    <div class="col-12 justify-content-md-between d-md-flex">
+        <h5 class="title text-uppercase mb-0">read emails</h5>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item text-capitalize active" aria-current="page">
+                    <a href="/email/inboxes">email</a>
+                </li>
+                <li class="breadcrumb-item text-capitalize" aria-current="page">
+                    read emails
+                </li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+
+<!-- Middle Section -->
+<div class="row email-inboxe mb-3">
+    <div class="col-12">
+        <div class="row">
+            <!-- Left Side -->
+            <div class="col-md-3">
+                <%- include("../../partials/leftside-emails.ejs")  %>
+            </div>
+            <!-- Right Side -->
+            <div class="col-md-9">
+                <div class="card rounded shadow border-0 p-2 inboxe-rightside">
+                    <!-- Toolbar Settings -->
+                    <div class="btn-toolbar p-3" role="toolbar">
+                        <div class="btn-group btn-group-sm me-2 mb-2 mb-sm-0">
+                            <button type="button" class="btn btn-primary anm-riple"><i
+                                    class="fas fa-inbox"></i></button>
+                            <button type="button" class="btn btn-primary anm-riple"><i
+                                    class="fas fa-exclamation-circle"></i></button>
+                            <button type="button" class="btn btn-primary anm-riple"><i
+                                    class="far fa-trash-alt"></i></button>
+                        </div>
+                        <div class="btn-group btn-group-sm me-2 mb-2 mb-sm-0">
+                            <button type="button" class="btn btn-primary rounded-1 anm-riple" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="fas fa-folder"></i> <i class="fas fa-chevron-down font-xs ms-1"></i>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Updates</a>
+                                <a class="dropdown-item" href="#">Social</a>
+                                <a class="dropdown-item" href="#">Team Manage</a>
+                            </div>
+                        </div>
+                        <div class="btn-group btn-group-sm me-2 mb-2 mb-sm-0">
+                            <button type="button" class="btn btn-primary rounded-1 anm-riple" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="fas fa-tag"></i> <i class="fas fa-chevron-down font-xs ms-1"></i>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Updates</a>
+                                <a class="dropdown-item" href="#">Social</a>
+                                <a class="dropdown-item" href="#">Team Manage</a>
+                            </div>
+                        </div>
+
+                        <div class="btn-group btn-group-sm me-2 mb-2 mb-sm-0">
+                            <button type="button" class="btn btn-primary rounded-1 anm-riple" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                More <i class="fas fa-ellipsis-v font-xs ms-2"></i>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Mark as Unread</a>
+                                <a class="dropdown-item" href="#">Mark as Important</a>
+                                <a class="dropdown-item" href="#">Add to Tasks</a>
+                                <a class="dropdown-item" href="#">Add Star</a>
+                                <a class="dropdown-item" href="#">Mute</a>
+                            </div>
+                        </div>
+
+
+                        <div class="ms-auto mt-1">
+                            <small class="text-muted font-xs">26 min ago</small>
+                        </div>
+                    </div>
+
+                    <!-- Message Content -->
+                    <div class="card-body">
+                        <!-- Message Header -->
+                        <div class="d-flex mb-4">
+                            <div class="flex-shrink-0 me-3">
+                                <img class="rounded-circle avatar-vmd" src="/assets/img/avatar.png"
+                                    alt="Generic placeholder image">
+                            </div>
+                            <div class="flex-grow-1 overflow-hidden">
+                                <h6 class="text-capitalize mt-1 text-truncate">Sender name here</h6>
+                                <small class="text-muted font-sm text-truncate">support@domain.com</small>
+                            </div>
+                        </div>
+
+                        <!-- Message Content -->
+                        <article class="msg-con">
+                            <h6>This Week's Top Stories</h6>
+                            <p>Dear Lorem Ipsum,</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis a voluptatem similique
+                                est. Explicabo, temporibus. Beatae?</p>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam beatae odio maxime!
+                                Molestias cum maxime sunt libero ea reprehenderit, error odio laboriosam.</p>
+                            <p>Salam...</p>
+                        </article>
+
+                        <hr class="mb-4 bg-dark">
+
+                        <!-- Attachments -->
+                        <div class="row g-2">
+                            <div class="col-xl-2 col-6">
+                                <div class="card border-0 shadow">
+                                    <img class="card-img-top img-fluid"
+                                        src="https://source.unsplash.com/collection/190727/200x100" alt="Card image">
+                                    <div class="py-2 text-center">
+                                        <a href="javascript: void(0);" class="fw-medium">Download</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col-6">
+                                <div class="card border-0 shadow">
+                                    <img class="card-img-top img-fluid"
+                                        src="https://source.unsplash.com/collection/190728/200x100" alt="Card image">
+                                    <div class="py-2 text-center">
+                                        <a href="javascript: void(0);" class="fw-medium">Download</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Reply Button -->
+                        <a href="javascript: void(0);" class="btn btn-sm btn-secondary anm-riple mt-4"><i
+                                class="fas fa-reply me-1 font-xs"></i> Reply</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Modal Of Message Of Compose -->
+<%- include ("../../partials/model-send-message.ejs") %>

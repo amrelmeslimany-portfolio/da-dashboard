@@ -1,0 +1,128 @@
+<!-- Top Section -->
+<div class="row">
+    <div class="col-12 justify-content-md-between d-md-flex">
+        <h5 class="title text-uppercase mb-0">create blog</h5>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item text-capitalize active" aria-current="page"><a href="/">dashboard</a>
+                </li>
+                <li class="breadcrumb-item text-capitalize" aria-current="page">create blog
+                </li>
+            </ol>
+        </nav>
+    </div>
+</div>
+<!-- Left Section -->
+<div class="row mb-3">
+    <div class="col-lg-12">
+        <!-- inner top -->
+        <div class="card rounded shadow border-0">
+            <div class="card-body rounded-bottom rounded-1">
+                <form class="create-article-form">
+                    <!-- NAVBAR & HEADER -->
+                    <h6 class="title-section border-bottom text-muted pb-1 mb-3">Navbar & Header</h6>
+                    <div class="row mb-2">
+                        <label class="col-form-label col-lg-2">Blog Name:</label>
+                        <div class="col-lg-10">
+                            <input type="text" name="blogName" class="form-control" placeholder="Blog Name...">
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <!-- Upload Logo For Blog -->
+                        <div class="col-sm-6">
+                            <div class="row g-lg-4">
+                                <label class="col-form-label col-lg-4">Blog Logo:</label>
+                                <div class="col-lg-8">
+                                    <div class="droparea rounded-1 border-primary align-middle text-center">
+                                        <i class="fas fa-upload text-black-50 mb-2" style="font-size: 30px;"></i>
+                                        <h6 class="text-muted">Drag Logo</h6>
+                                        <button type="button" class="btn btn-light anm-riple">Upload Logo</button>
+                                    </div>
+                                    <input type="file" name="logoImg" hidden id="uploadLogo">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Create Header Img For Blog -->
+                        <div class="col-sm-6">
+                            <div class="row g-lg-4">
+                                <label class="col-form-label col-lg-4">Header Img:</label>
+                                <div class="col-lg-8">
+                                    <div class="droparea rounded-1 border-primary align-middle text-center">
+                                        <i class="fas fa-upload text-black-50 mb-2" style="font-size: 30px;"></i>
+                                        <h6 class="text-muted">Drag Img</h6>
+                                        <button type="button" class="btn btn-light anm-riple">Upload Img</button>
+                                    </div>
+                                    <input type="file" name="headerImg" hidden id="uploadHeader">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <label for="headerTitle" class="col-form-label col-lg-2">Header Title:</label>
+                        <div class="col-lg-10">
+                            <input type="text" name="headerTitle" class="form-control"
+                                placeholder="Example Of Title...">
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <label class="col-form-label col-lg-2">Intro Header:</label>
+                        <div class="col-lg-10">
+                            <textarea type="text" name="introHeader" class="form-control" rows="2"
+                                placeholder="Here You Write The Intro Content..."></textarea>
+                        </div>
+                    </div>
+                    <!-- ABOUT -->
+                    <h6 class="title-section border-bottom text-muted pb-1 mb-3">About</h6>
+                    <div class="row mb-2">
+
+                        <div class="col-sm-6">
+                            <div class="row g-lg-4">
+                                <label class="col-form-label col-lg-4">About Img:</label>
+                                <div class="col-lg-8">
+                                    <div class="droparea rounded-1 border-primary align-middle text-center">
+                                        <i class="fas fa-upload text-black-50 mb-2" style="font-size: 30px;"></i>
+                                        <h6 class="text-muted">Drag Img</h6>
+                                        <button type="button" class="btn btn-light anm-riple">Upload Img</button>
+                                    </div>
+                                    <input type="file" name="aboutImg" hidden id="uploadAbout">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="row g-lg-4">
+                                <label class="col-form-label col-lg-4">About Text:</label>
+                                <div class="col-lg-8">
+                                    <textarea type="text" name="aboutText" class="form-control"
+                                        style="min-height: 250px;" cols="6"
+                                        placeholder="Here You Write The About Text..."></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Footer -->
+                    <h6 class="title-section border-bottom text-muted pb-1 mb-3">Footer</h6>
+                    <div class="row mb-2">
+                        <label class="col-form-label col-lg-2">Design By:</label>
+                        <div class="col-lg-10">
+                            <input type="text" class="form-control" name="designedBy" placeholder="ex: amr">
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <label class="col-form-label col-lg-2">All Rights Reserved By:</label>
+                        <div class="col-lg-10">
+                            <input type="text" class="form-control" name="rightsName" placeholder="ex: AD">
+                        </div>
+                    </div>
+                    <!-- All rights reserved. -->
+                    <!-- Button to submit -->
+                    <div class="row justify-content-end">
+                        <div class="col-lg-10">
+                            <button type="submit" class="btn btn-primary anm-riple">Create</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

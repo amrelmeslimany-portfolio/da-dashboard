@@ -1,0 +1,426 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300&family=Oswald:wght@500&display=swap');
+
+
+// Mixins
+
+@mixin active-bg-link($bg-color:var(--bs-gray-200)) {
+
+    &:active,
+    &:hover,
+    &:focus {
+        background-color: $bg-color;
+    }
+}
+
+@mixin avatar-circle($size:40) {
+    height: #{$size}px;
+    width: #{$size}px;
+    background-color: var(--bs-gray-200);
+    padding: 0;
+    border-radius: 50% !important;
+    font-size: #{$size * 0.375}px;
+    color: var(--bs-gray-600);
+}
+
+@mixin box-decore($justShadow:false) {
+    @if $justShadow==true {
+        box-shadow: 0px 2px 10px rgba(black, 0.06);
+    }
+
+    @else {
+        border: 1px solid var(--bs-gray-400) !important;
+        border-radius: 5px;
+        box-shadow: 0 0px 10px rgba(black, 0.1) !important;
+    }
+}
+
+@mixin line-text($color:var(--bs-gray-200)) {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    right: 0;
+    background-color: $color;
+    top: 10px;
+}
+
+@mixin custom-scrollbar($barcolor:transparent, $thumb-bgColor: var(--bs-gray-400)) {
+
+    .simplebar-track.simplebar-vertical {
+        background-color: $barcolor;
+        width: 9px;
+    }
+
+    .simplebar-scrollbar {
+        &::before {
+            border-radius: 0;
+            background-color: $thumb-bgColor;
+        }
+    }
+}
+
+@include custom-scrollbar();
+
+
+
+
+@mixin padding($p1, $p2, $dir) {
+    @if $dir==rl {
+        padding-#{$r}: $p1;
+        padding-#{$l}: $p2;
+    }
+
+    @else {
+        padding-top: $p1;
+        padding-bottom: $p2;
+    }
+}
+
+
+@mixin flex-center() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@mixin refraction {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 8px;
+    background-color: rgba(white, 0.15);
+    z-index: 2;
+}
+
+@mixin underline-btn-active($color: $primary) {
+    transition: 0.2s linear;
+
+    &.active,
+    &:hover {
+        color: $color;
+        box-shadow: none;
+    }
+
+    &::after {
+        content: "";
+        transform: scaleX(0);
+        position: absolute;
+        bottom: -10px;
+        #{$l}: 0;
+        width: 100%;
+        height: 2px;
+        background-color: $color;
+        transition: 0.2s linear;
+    }
+
+    &.active::after,
+    &:hover::after {
+        transform: scaleX(1.1);
+    }
+}
+
+@mixin activity-style {
+    ul.wr-activates {
+        border-#{$l}: dashed 2px $lightenGray;
+
+        .activate-item {
+            position: relative;
+            padding-#{$l}: 1rem;
+
+            .pre-arrow {
+                position: absolute;
+                #{$l}: -8px;
+                top: -3px;
+                color: $lightenPrimary
+            }
+
+            .flex-shrink-0 {
+                small {
+                    color: $dark;
+                    display: block;
+
+                    .fa-chevron-right {
+                        color: $lightenPrimary;
+                        margin: 0 0.5rem;
+                    }
+                }
+
+            }
+
+            p {
+                line-height: 16px;
+                font-size: 0.9rem;
+            }
+
+            &.active {
+                .pre-arrow {
+                    animation: movex 1s ease-in-out infinite forwards alternate;
+
+                    i {
+                        font-weight: 900;
+                        color: $primary;
+                    }
+                }
+
+                .flex-shrink-0 {
+                    small {
+                        color: $primary;
+
+                        .fa-chevron-right {
+                            color: $primary;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+/* Body */
+body {
+    font-family: $lato;
+}
+
+
+/* Add Font Family For Headers */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $oswald;
+}
+
+table {
+    &.table-border-separator {
+        border-collapse: separate;
+        border-spacing: 0 12px;
+
+        tr {
+            background-color: #fff;
+        }
+    }
+
+    &.table-nowrap {
+
+        td,
+        th {
+            white-space: nowrap;
+        }
+    }
+
+    &.t-h {
+        tbody {
+            tr {
+                transition: 0.2s;
+
+                &:hover {
+                    background-color: $lightenGray;
+                }
+            }
+        }
+    }
+
+    th {
+        border-bottom: none;
+    }
+
+    td {
+        border-bottom-color: $lightenGray;
+    }
+
+    td {
+        font-size: 0.9rem;
+        color: var(--bs-gray-700);
+    }
+}
+
+hr {
+    background: var(--bs-gray-400);
+}
+
+// Customs Class And Custom Bootstrap
+.form-control {
+    &::placeholder {
+        color: var(--bs-gray-600);
+        font-size: 0.8rem;
+        vertical-align: middle;
+        font-family: "Lato";
+    }
+}
+
+textarea {
+    &.form-control {
+        @include custom-scrollbar();
+        resize: none;
+    }
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.font-lg {
+    font-size: 4rem;
+}
+
+.font-2rem {
+    font-size: 2rem;
+}
+
+.font-md {
+    font-size: 1rem;
+}
+
+.font-sm {
+    font-size: 0.88rem;
+    letter-spacing: 1px;
+}
+
+.font-xs {
+    font-size: 0.68rem;
+    letter-spacing: 1px;
+}
+
+.avatar-md {
+    width: 4.5rem;
+    height: 4.5rem;
+}
+
+.avatar-vmd {
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+.avatar-sm {
+    width: 2rem;
+    height: 2rem;
+}
+
+.progress-sm {
+    height: 0.4rem !important;
+}
+
+.shadow {
+    box-shadow: 0 0px 5px rgba(black, 0.04) !important;
+}
+
+
+#layout-wrap {
+    background-color: $dark;
+}
+
+.dropdown {
+
+    &:not(.profile-box):not(.map-h-site) {
+        .dropdown-toggle {
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    .dropdown-menu {
+        padding: 8px 0;
+    }
+
+
+    .dropdown-item {
+        cursor: pointer;
+    }
+}
+
+
+.toast-container {
+    z-index: 1002;
+    top: 75px;
+}
+
+.progress {
+    height: 1.3rem;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    background-color: var(--bs-gray-100);
+}
+
+.pagination {
+    &.pagination-rounded {
+        .page-item {
+            .page-link {
+                border: none;
+                @include avatar-circle(35);
+                text-align: center;
+                line-height: 35px;
+                background-color: white;
+                color: $dark;
+            }
+
+            &.active,
+            &:not(.disabled):hover {
+                .page-link {
+                    background-color: $primary;
+                    color: white;
+                }
+            }
+
+            &.disabled {
+                .page-link {
+                    color: var(--bs-gray-200);
+                }
+            }
+
+        }
+    }
+}
+
+
+/* Avatar Group */
+.avatar-group {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 12px;
+
+    .avatar-group-item {
+        margin-left: -12px;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        transition: .2s;
+        position: relative;
+        z-index: 1;
+
+        &.text-avatar {
+            background-color: $lightenPrimary;
+        }
+
+        &:hover {
+            transform: translateY(-2px);
+            z-index: 2;
+        }
+    }
+}
+
+/* Chrome, Safari, Edge, Opera */
+input.hide-arrows::-webkit-outer-spin-button,
+input.hide-arrows::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input.hide-arrows[type=number] {
+    -moz-appearance: textfield;
+}
+
+
+// Footer
+#main-footer {
+    background-color: $clearWhite;
+}

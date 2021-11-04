@@ -1,0 +1,82 @@
+<!-- Top Section -->
+<div class="row">
+    <div class="col-12 justify-content-md-between d-md-flex">
+        <h5 class="title text-uppercase mb-0">create new project</h5>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item text-capitalize active" aria-current="page">
+                    <a href="/">dashboard</a>
+                </li>
+                <li class="breadcrumb-item text-capitalize" aria-current="page">
+                    create new project
+                </li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<!-- Middle Section Content -->
+<div class="row mb-3">
+    <div class="col-lg-12">
+        <div class="card border-0 shadow">
+            <div class="card-body">
+                <strong class="card-title d-block mb-4">Create New Project</strong>
+                <form>
+                    <div class="row mb-4">
+                        <label for="projectname" class="col-form-label col-lg-2">Project Name</label>
+                        <div class="col-lg-10">
+                            <input id="projectname" name="projectname" type="text" class="form-control"
+                                placeholder="Enter Project Name...">
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <label for="projectdesc" class="col-form-label col-lg-2">Project Description</label>
+                        <div class="col-lg-10">
+                            <textarea class="form-control" id="projectdesc" rows="3"
+                                placeholder="Enter Project Description..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="row mb-4">
+                        <label class="col-form-label col-lg-2">Project Date</label>
+                        <div class="col-lg-10">
+                            <div class="input-daterange input-group">
+                                <input type="date" class="form-control" placeholder="Start Date" name="start">
+                                <input type="date" class="form-control" placeholder="End Date" name="end">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mb-4">
+                        <label for="projectbudget" class="col-form-label col-lg-2">Budget</label>
+                        <div class="col-lg-10">
+                            <div class="input-group mb-2">
+                                <span class="input-group-text">$</span>
+                                <input id="projectbudget" name="projectbudget" type="text"
+                                    placeholder="Enter Project Budget..." class="form-control">
+                                <span class="input-group-text">.00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mb-4">
+                        <label class="col-form-label col-lg-2">Attached Files</label>
+                        <div class="col-lg-10">
+                            <div class="droparea rounded-1 border-primary align-middle text-center">
+                                <i class="fas fa-upload text-black-50 mb-2" style="font-size: 30px;"></i>
+                                <h6 class="text-muted">Drag Files</h6>
+                                <button type="button" class="btn btn-light anm-riple">Upload Files</button>
+                            </div>
+                            <input type="hidden" name="files">
+                        </div>
+                    </div>
+                    <div class="row justify-content-end">
+                        <div class="col-lg-10">
+                            <button type="submit" class="btn btn-primary anm-riple">Create Project</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

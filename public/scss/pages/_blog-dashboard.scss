@@ -1,0 +1,19 @@
+.brief-st {
+    .circle-avatar {
+        width: 3rem;
+        height: 3rem;
+    }
+}
+
+.posts-content {
+    .btn-group {
+        button {
+            @include underline-btn-active;
+        }
+    }
+}
+
+
+.act-wr {
+    @include activity-style;
+}

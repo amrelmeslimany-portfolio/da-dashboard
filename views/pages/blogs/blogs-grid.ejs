@@ -1,0 +1,259 @@
+<!-- Top Section -->
+<div class="row">
+    <div class="col-12 justify-content-md-between d-md-flex">
+        <h5 class="title text-uppercase mb-0">blogs grid</h5>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item text-capitalize active" aria-current="page">
+                    <a href="/blogs">blog</a>
+                </li>
+                <li class="breadcrumb-item text-capitalize" aria-current="page">
+                    blogs grid
+                </li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+
+<!-- Middle Content -->
+<div class="row mb-3 blogs-section">
+    <!-- Posts -->
+    <div class="col-xl-9 col-lg-8">
+        <div class="card border-0 shadow mb-custom">
+            <!-- Header is Nav Tabs -->
+            <ul class="nav nav-tabs justify-content-center border-bottom pt-2" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" data-bs-toggle="tab" href="#all-post" role="tab">
+                        All Post
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" href="#archive" role="tab">
+                        Archive
+                    </a>
+                </li>
+            </ul>
+            <!-- Content Of Header panes -->
+            <div class="tab-content p-4">
+                <!-- Posts -->
+                <div class="tab-pane active" id="all-post" role="tabpanel">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-8">
+                            <!-- Heaer Of Section -->
+                            <div>
+                                <div class="row align-items-center">
+                                    <div class="col-4">
+                                        <h5 class="mb-0">Blog Grid</h5>
+                                    </div>
+                                    <div class="col-8">
+                                        <ul class="nav nav-pills justify-content-end">
+                                            <li class="nav-item">
+                                                <a class="nav-link disabled" href="#" tabindex="-1"
+                                                    aria-disabled="true">View :</a>
+                                            </li>
+                                            <li class="nav-item" data-bs-placement="top" title="List">
+                                                <a class="nav-link" href="/blogs/list">
+                                                    <i class="fas fa-list"></i>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item" data-bs-placement="top" title="Grid">
+                                                <a class="nav-link active" href="/blogs">
+                                                    <i class="fas fa-th-large"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+
+                                <hr class="mb-4 bg-secondary">
+
+                                <div class="row g-3 mb-4">
+                                    <% for( let index = 1; index < 7; index++ ) { %>
+                                    <div class="col-sm-6">
+                                        <div class="card">
+                                            <div class="p-3">
+                                                <h6><a href="/blog/details" class="text-dark">Beautiful Day with
+                                                        Friends</a></h6>
+                                                <p class="text-muted mb-0 font-sm">10 Apr, 2020</p>
+                                            </div>
+
+                                            <div class="position-relative p-2">
+                                                <img src="https://picsum.photos/400/25<%= index %>" alt="img"
+                                                    class="img-thumbnail img-fluid">
+                                            </div>
+
+                                            <div class="p-3">
+                                                <ul class="list-inline">
+                                                    <li class="list-inline-item me-3">
+                                                        <a href="javascript: void(0);" class="font-sm text-muted">
+                                                            <i
+                                                                class="fas fa-tag align-middle text-muted font-xs me-1"></i>
+                                                            Project
+                                                        </a>
+                                                    </li>
+                                                    <li class="list-inline-item me-3">
+                                                        <a href="javascript: void(0);" class="font-sm text-muted">
+                                                            <i
+                                                                class="fas fa-comment-dots align-middle text-muted font-xs me-1"></i>
+                                                            12
+                                                            Comments
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                                <p class="font-sm">Neque porro quisquam est, qui dolorem ipsum quia
+                                                    dolor sit amet.
+                                                </p>
+
+                                                <div>
+
+                                                    <a href="javascript: void(0);" class="text-primary font-sm">Read
+                                                        more <i class="fas fa-arrow-right font-xs align-middle"></i></a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <% } %>
+
+
+                                </div>
+
+
+                                <hr class="mb-4 bg-secondary">
+
+                                <!-- Footer Pagination -->
+                                <div class="text-center">
+                                    <ul class="pagination pagination-rounded mt-3 p-1 justify-content-center">
+                                        <li class="page-item disabled me-2">
+                                            <a class="page-link rounded-0"> <i class="fas fa-arrow-left"></i> </a>
+                                        </li>
+                                        <% for( let index = 0; index < 4; index++ ) { %>
+                                        <li class="page-item me-2 <%= index == 2 ? "active" : "" %>">
+                                            <a class="page-link" href="javascript: void(0);"><%= index + 1 %> </a></li>
+                                        <% } %>
+                                        <li class="page-item">
+                                            <a class="page-link rounded-0" href="javascript: void(0);"><i
+                                                    class="fas fa-arrow-right"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Archived Posts -->
+                <div class="tab-pane" id="archive" role="tabpanel">
+
+                    <div class="row justify-content-center">
+                        <div class="col-xl-8">
+                            <h5>Archive</h5>
+
+                            <div class="mt-5">
+                                <div class="d-flex flex-wrap">
+                                    <div class="me-2">
+                                        <strong>2020</strong>
+                                    </div>
+                                    <div class="ms-auto">
+                                        <span
+                                            class="badge bg-success bg-opacity-75 rounded-pill float-end ms-1 font-xs">03</span>
+                                    </div>
+                                </div>
+                                <hr class="mt-2 bg-dark">
+                                <div class="list-group  list-group-flush">
+                                    <a href="/blogs/details" class="list-group-item text-muted border-light"><i
+                                            class="fas fa-circle align-middle me-1" style="font-size: 5px;"></i>
+                                        Beautiful Day with Friends</a>
+
+                                    <a href="/blogs/details" class="list-group-item text-muted border-light"><i
+                                            class="fas fa-circle align-middle me-1" style="font-size: 5px;"></i>
+                                        Drawing a sketch</a>
+
+                                    <a href="/blogs/details" class="list-group-item text-muted border-light"><i
+                                            class="fas fa-circle align-middle me-1" style="font-size: 5px;"></i>
+                                        Project discussion with
+                                        team</a>
+
+                                </div>
+                            </div>
+                            <div class="mt-5">
+                                <div class="d-flex flex-wrap">
+                                    <div class="me-2">
+                                        <strong>2019</strong>
+                                    </div>
+                                    <div class="ms-auto">
+                                        <span
+                                            class="badge bg-success bg-opacity-75 rounded-pill float-end ms-1 font-xs">06</span>
+                                    </div>
+                                </div>
+                                <hr class="mt-2 bg-dark">
+                                <div class="list-group  list-group-flush">
+                                    <a href="/blogs/details" class="list-group-item text-muted border-light"><i
+                                            class="fas fa-circle align-middle me-1" style="font-size: 5px;"></i>
+                                        Beautiful Day with Friends</a>
+
+                                    <a href="/blogs/details" class="list-group-item text-muted border-light"><i
+                                            class="fas fa-circle align-middle me-1" style="font-size: 5px;"></i>
+                                        Drawing a sketch</a>
+
+                                    <a href="/blogs/details" class="list-group-item text-muted border-light"><i
+                                            class="fas fa-circle align-middle me-1" style="font-size: 5px;"></i>
+                                        Project discussion with
+                                        team</a>
+                                    <a href="/blogs/details" class="list-group-item text-muted border-light"><i
+                                            class="fas fa-circle align-middle me-1" style="font-size: 5px;"></i>
+                                        Beautiful Day with Friends</a>
+
+                                    <a href="/blogs/details" class="list-group-item text-muted border-light"><i
+                                            class="fas fa-circle align-middle me-1" style="font-size: 5px;"></i>
+                                        Drawing a sketch</a>
+
+                                    <a href="/blogs/details" class="list-group-item text-muted border-light"><i
+                                            class="fas fa-circle align-middle me-1" style="font-size: 5px;"></i>
+                                        Project discussion with
+                                        team</a>
+
+                                </div>
+                            </div>
+                            <div class="mt-5">
+                                <div class="d-flex flex-wrap">
+                                    <div class="me-2">
+                                        <strong>2018</strong>
+                                    </div>
+                                    <div class="ms-auto">
+                                        <span
+                                            class="badge bg-success bg-opacity-75 rounded-pill float-end ms-1 font-xs">03</span>
+                                    </div>
+                                </div>
+                                <hr class="mt-2 bg-dark">
+                                <div class="list-group  list-group-flush">
+                                    <a href="/blogs/details" class="list-group-item text-muted border-light"><i
+                                            class="fas fa-circle align-middle me-1" style="font-size: 5px;"></i>
+                                        Beautiful Day with Friends</a>
+
+                                    <a href="/blogs/details" class="list-group-item text-muted border-light"><i
+                                            class="fas fa-circle align-middle me-1" style="font-size: 5px;"></i>
+                                        Drawing a sketch</a>
+
+                                    <a href="/blogs/details" class="list-group-item text-muted border-light"><i
+                                            class="fas fa-circle align-middle me-1" style="font-size: 5px;"></i>
+                                        Project discussion with
+                                        team</a>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Sidebar -->
+    <div class="col-xl-3 col-lg-4">
+        <%- include("../../partials/blogs-sidebar.ejs")  %>
+    </div>
+</div>

@@ -1,0 +1,93 @@
+/* Email Inboxes */
+.email-inboxe {
+    .inboxe-leftside {
+        padding: 20px;
+
+        .mail-list {
+            .list-group-item {
+                border: none;
+            }
+
+            &:first-of-type {
+
+                .list-group-item {
+                    font-size: 0.9rem;
+
+                    i {
+                        font-size: 0.7rem;
+                    }
+
+                    &.active,
+                    &:hover {
+                        color: var(--bs-danger);
+                        background-color: transparent;
+                    }
+                }
+            }
+
+            &:last-of-type {
+                span {
+                    margin-top: 0.35rem;
+                }
+            }
+        }
+    }
+
+    .inboxe-rightside {
+        .message-list {
+            li {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: nowrap;
+                padding: 0.5rem;
+                transition: 0.2s;
+
+                &:hover,
+                &.unread-msg {
+                    background-color: $lightenGray;
+                }
+
+                .col-mail-1 {
+                    display: flex;
+                    flex-wrap: nowrap;
+                    flex: 1 0 180px;
+                    align-items: center;
+
+                    .form-check {
+                        display: inline-block;
+
+                        .form-check-input {
+                            margin-top: 4px;
+                            height: 1.2rem;
+                            width: 1.2rem;
+                        }
+                    }
+
+                }
+
+                .col-mail-2 {
+                    display: flex;
+                    flex-wrap: nowrap;
+                    align-items: center;
+
+                    .subject {
+                        flex: 0 1 100%;
+                    }
+                }
+
+                .date {
+                    flex: 0 0 75px;
+                }
+            }
+        }
+
+
+        .msg-con {
+            p {
+                color: $gray;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}

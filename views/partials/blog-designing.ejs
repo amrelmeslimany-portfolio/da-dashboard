@@ -1,0 +1,109 @@
+<!-- navbar -->
+<nav class="navbar navbar-dark border-bottom border-2 border-secondary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#!">
+            <img src="/assets/img/aee-logo.png" class="img-fluid" width="35px" alt="aee logo">
+            <strong class="text-uppercase align-middle ms-1 font-md">Blog <%= index %> </strong>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#blogNavbar"
+            aria-controls="blogNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse border-top border-secondary mt-2" id="blogNavbar">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#!">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#!">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#!">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#!">Projects</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Header -->
+<header class="d-flex align-items-center justify-content-center blog-d-header">
+    <div class="overflow-bg"></div>
+    <div class="container-fluid">
+        <div class="text-center header-intro">
+            <h2 class="text-uppercase h1 text-white">Welcome in our blog</h2>
+            <p class="text-capitalize text-muted mb-0">our blog is called <strong>blog name</strong>.</p>
+            <p class="text-capitalize text-muted">we are extremely happy for visiting us.Thank you <i
+                    class="fas fa-heart text-danger"></i></p>
+        </div>
+    </div>
+</header>
+
+<!-- About -->
+<section class="about-page py-5">
+    <div class="container-fluid">
+        <h3 class="text-center mb-3">About</h3>
+        <div class="row g-1  align-items-center">
+            <div class="col-md-6">
+                <img src="https://think360studio-media.s3.ap-south-1.amazonaws.com/photo/plugin/article/2019/1558356942_1-org.jpg"
+                    class="img-fluid about-img" alt="about img">
+            </div>
+            <div class="col-md-6">
+                <div class="card border-0">
+                    <div class="card-body">
+                        <article>
+                            <h6 class="text-capitalize">title one</h6>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta ut ad consequatur
+                                accusamus
+                                praesentium non porro dolores consequuntur, quas commodi, repudiandae illum natus
+                                doloremque.
+                            </p>
+                        </article>
+                        <article>
+                            <h6 class="text-capitalize">title two</h6>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta ut ad consequatur
+                                accusamus
+                                praesentium non porro dolores consequuntur, quas commodi, repudiandae illum natus
+                                doloremque
+                                neque laudantium iste delectus illo nobis.<br> Lorem ipsum dolor sit amet consectetur
+                                Lorem
+                                ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus.
+                            </p>
+                        </article>
+                        <article>
+                            <h6 class="text-capitalize">title three</h6>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta ut ad consequatur
+                                accusamus
+                                praesentium non porro dolores consequuntur, quas commodi, repudiandae illum natus
+                                doloremque
+                                neque laudantium iste delectus illo nobis.<br> Lorem ipsum dolor sit amet consectetur
+                                Lorem
+                                ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-muted py-2">
+    <div class="container-fluid">
+        <div class="text-center">
+            <p class="text-capitalize mb-0">
+                designed by: <a href="javascript: void();" class="text-light" target="_blank"
+                    rel="noopener noreferrer"><strong>Amr
+                        Mohamed</strong></a>
+                <br>
+                &copy; <%= new Date().getFullYear() %> <strong>AD</strong>. All rights are reserved.
+            </p>
+        </div>
+    </div>
+</footer>

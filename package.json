@@ -1,0 +1,31 @@
+{
+  "name": "admin-dashboard",
+  "version": "1.0.0",
+  "description": "this site for admin panel to control the whole site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "keywords": [
+    "dashboard",
+    "admin",
+    "control",
+    "panel",
+    "html",
+    "css",
+    "typescript"
+  ],
+  "author": "amr emam",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.1",
+    "simplebar": "^5.3.6"
+  }
+}

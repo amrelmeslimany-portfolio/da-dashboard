@@ -1,0 +1,39 @@
+.user-profile-section {
+    .verti-timeline {
+        border-#{$l}: 3px dashed $lightenGray;
+        margin: 0 10px;
+
+        .event-list {
+            position: relative;
+            padding-#{$l}: 20px;
+            padding-bottom: 40px;
+
+            &:last-child {
+                padding-bottom: 0;
+            }
+
+            .event-timeline-dot {
+                position: absolute;
+                #{$l}: -9px;
+                top: 2px;
+                z-index: 3;
+                font-size: 14px;
+
+
+            }
+
+            &.active {
+                .event-timeline-dot {
+                    animation: movex 1s ease-in-out infinite forwards alternate;
+
+                    i {
+                        font-weight: 900;
+                        color: $primary;
+                    }
+                }
+            }
+        }
+
+
+    }
+}

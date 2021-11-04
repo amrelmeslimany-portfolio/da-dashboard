@@ -1,0 +1,31 @@
+.blogs-section {
+    .nav.nav-tabs {
+        .nav-item {
+
+            .nav-link {
+                position: relative;
+                color: $dark;
+                margin-bottom: auto;
+                border-radius: 0;
+                border: none;
+
+                &.active {
+                    background-color: transparent;
+                    border: none;
+                    color: $primary;
+                }
+
+                @include underline-btn-active;
+
+                &::after {
+                    bottom: -1px;
+                }
+
+                &:hover {
+                    border: 0;
+
+                }
+            }
+        }
+    }
+}

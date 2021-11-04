@@ -1,0 +1,183 @@
+<% 
+    let headers = "Product ProductDesc Price Quantity Total".split(" ")
+%>
+<!-- Top Section -->
+<div class="row">
+    <div class="col-12 justify-content-md-between d-md-flex">
+        <h5 class="title text-uppercase mb-0">cart</h5>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item text-capitalize active" aria-current="page">
+                    <a href="/products">ecommerce</a>
+                </li>
+                <li class="breadcrumb-item text-capitalize" aria-current="page">
+                    cart
+                </li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<!-- Middle Section or Content -->
+
+<div class="row products-cart mb-3">
+    <!-- Left Side -->
+    <div class="col-xl-8">
+        <div class="card rounded shadow border-0">
+            <div class="card-body rounded-bottom rounded-1">
+                <!-- Content -->
+                <div class="table-responsive">
+                    <table class="table table-nowrap align-middle">
+                        <thead class="table-light">
+                            <tr>
+                                <% headers.forEach(head => { %>
+                                <% if (head == "Total") { %>
+                                <th colspan="2"><%= head %> </th>
+                                <% } else { %>
+                                <th><%= head %> </th>
+                                <% } %>
+                                <% }) %>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% for( let index = 0; index < 7; index++ ) { %>
+                            <tr>
+                                <td>
+                                    <img src="https://themesbrand.com/skote-django/layouts/assets/images/product/img-1.png"
+                                        alt="product-img" title="product-img" class="avatar-md">
+                                </td>
+                                <td>
+                                    <h6 class=" text-truncate"><a href="/ecommerce/product-details"
+                                            class="text-dark">Half sleeve T-shirt</a></h6>
+                                    <p class="mb-0">Color : <span class="fw-medium">Maroon</span></p>
+                                </td>
+                                <td>
+                                    $<%= (index + 1) * 32 %>
+                                </td>
+                                <td>
+                                    <div class="me-3" style="width: 120px;">
+                                        <div class="input-group input-group-sm numbers-withbuttons">
+                                            <button class="input-group-text btn btn-primary anm-riple minus">-</button>
+                                            <input type="number"
+                                                class="form-control border-0 px-1 text-center bg-light hide-arrows"
+                                                min="1" value="<%= index + 2 %>" placeholder="1" aria-label="quantity"
+                                                aria-describedby="basic-addon1">
+                                            <button class="input-group-text btn btn-primary anm-riple plus">+</button>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    $<%= (index + 2 ) * ((index + 1) * 32) %>
+                                </td>
+                                <td>
+                                    <a href="javascript:void(0);" class="action-icon text-danger"> <i
+                                            class="fas fa-trash"></i></a>
+                                </td>
+                            </tr>
+                            <% } %>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Footer -->
+                <div class="row mt-2">
+                    <div class="col-sm-6">
+                        <a href="/ecommerce/products" class="btn btn-secondary anm-riple">
+                            <i class="fas fa-arrow-left me-1 font-xs"></i> Continue Shopping
+                        </a>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="text-sm-end mt-2 mt-sm-0">
+                            <a href="/ecommerce/checkout" class="btn btn-primary anm-riple">
+                                <i class="fas fa-shopping-cart me-1 font-xs"></i> Checkout
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Right Side -->
+    <div class="col-xl-4">
+        <div class="card rounded shadow border-0 mb-4">
+            <div class="card-body rounded-bottom rounded-1">
+                <h5 class="card-title mb-3">Card Details</h5>
+                <div class="card text-white border-0 mb-0 visa-card" style="background-color: #00579f;">
+                    <div class="card-body">
+                        <!-- Header Of Visa -->
+                        <div class="head-box">
+                            <!-- VISA Word -->
+                            <div class="visa-pattern">
+                                <svg clip-rule="evenodd" fill-rule="evenodd" viewBox="0 0 560 400"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="m286.87 176.71c-.228 17.993 16.036 28.034 28.287 34.004 12.588 6.126 16.816 10.054 16.768 15.531-.096 8.384-10.042 12.083-19.35 12.227-16.24.252-25.681-4.384-33.188-7.891l-5.849 27.373c7.531 3.472 21.476 6.499 35.938 6.631 33.944 0 56.152-16.756 56.273-42.736.132-32.971-45.607-34.797-45.295-49.535.108-4.468 4.372-9.237 13.717-10.45 4.624-.612 17.392-1.081 31.866 5.585l5.681-26.484c-7.783-2.835-17.789-5.55-30.244-5.55-31.95 0-54.423 16.984-54.604 41.295m139.44-39.013c-6.198 0-11.423 3.616-13.753 9.165l-48.49 115.777h33.92l6.75-18.654h41.451l3.916 18.654h29.896l-26.089-124.942zm4.744 33.752 9.789 46.916h-26.809zm-185.31-33.752-26.737 124.942h32.322l26.725-124.942zm-47.817 0-33.644 85.04-13.609-72.308c-1.597-8.071-7.903-12.732-14.906-12.732h-54.999l-.769 3.628c11.291 2.45 24.119 6.402 31.89 10.63 4.756 2.582 6.114 4.84 7.675 10.978l25.776 99.706h34.161l52.369-124.942z"
+                                        fill="#fff" /></svg>
+                            </div>
+
+                            <div class="float-end">
+                                <svg clip-rule="evenodd" fill-rule="evenodd" viewBox="0 0 560 400"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="m286.87 176.71c-.228 17.993 16.036 28.034 28.287 34.004 12.588 6.126 16.816 10.054 16.768 15.531-.096 8.384-10.042 12.083-19.35 12.227-16.24.252-25.681-4.384-33.188-7.891l-5.849 27.373c7.531 3.472 21.476 6.499 35.938 6.631 33.944 0 56.152-16.756 56.273-42.736.132-32.971-45.607-34.797-45.295-49.535.108-4.468 4.372-9.237 13.717-10.45 4.624-.612 17.392-1.081 31.866 5.585l5.681-26.484c-7.783-2.835-17.789-5.55-30.244-5.55-31.95 0-54.423 16.984-54.604 41.295m139.44-39.013c-6.198 0-11.423 3.616-13.753 9.165l-48.49 115.777h33.92l6.75-18.654h41.451l3.916 18.654h29.896l-26.089-124.942zm4.744 33.752 9.789 46.916h-26.809zm-185.31-33.752-26.737 124.942h32.322l26.725-124.942zm-47.817 0-33.644 85.04-13.609-72.308c-1.597-8.071-7.903-12.732-14.906-12.732h-54.999l-.769 3.628c11.291 2.45 24.119 6.402 31.89 10.63 4.756 2.582 6.114 4.84 7.675 10.978l25.776 99.706h34.161l52.369-124.942z"
+                                        fill="#fff" /></svg>
+                            </div>
+
+                            <div>
+                                <i class="fas fa-microchip font-2rem text-warning"></i>
+                            </div>
+                        </div>
+                        <!-- Middle Of Visa -->
+                        <div class="row mt-5">
+                            <% for( let index = 0; index < 3; index++ ) { %>
+                            <div class="col-4">
+                                <p>
+                                    <i class="fas fa-star-of-life font-xs m-1"></i>
+                                    <i class="fas fa-star-of-life font-xs m-1"></i>
+                                    <i class="fas fa-star-of-life font-xs m-1"></i>
+                                </p>
+                            </div>
+                            <% } %>
+                        </div>
+                        <!-- Footer Of Visa -->
+                        <div class="mt-5">
+                            <h6 class="text-white float-end mb-0">12/22</h6>
+                            <h6 class="text-white mb-0">Amr Mohamed</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card rounded shadow border-0">
+            <div class="card-body rounded-bottom rounded-1">
+                <h5 class="card-title mb-2">Order Summary</h5>
+                <!-- Table -->
+                <div class="table-responsive">
+                    <table class="table mb-0">
+                        <tbody>
+                            <tr>
+                                <td>Grand Total :</td>
+                                <td>$ 1,857</td>
+                            </tr>
+                            <tr>
+                                <td>Discount : </td>
+                                <td>- $ 157</td>
+                            </tr>
+                            <tr>
+                                <td>Shipping Charge :</td>
+                                <td>$ 25</td>
+                            </tr>
+                            <tr>
+                                <td>Estimated Tax : </td>
+                                <td>$ 19.22</td>
+                            </tr>
+                            <tr>
+                                <th>Total :</th>
+                                <th>$ 1744.22</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

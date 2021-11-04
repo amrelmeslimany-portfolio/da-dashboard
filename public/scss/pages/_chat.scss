@@ -1,0 +1,183 @@
+.chat-leftside {
+    .chat-leftsidebar-nav {
+        .list-group-horizontal>.list-group-item.active {
+            border-radius: 5px !important;
+            background-color: $primary;
+        }
+
+        .chat-users-list {
+            a {
+                border: none;
+                border-bottom: 1px solid var(--bs-gray-200);
+                transition: 0.2s;
+
+                &:last-child {
+                    border-bottom: none;
+                }
+
+                &.list-group-item {
+                    background: none;
+                }
+
+                &.active,
+                &:hover {
+                    background-color: white;
+                    @include box-decore(true);
+                }
+            }
+        }
+
+        .contact-item {
+            margin-bottom: 1rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            .icon-number {
+                font-style: normal;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.user-chat {
+    .nav-btn {
+        @include avatar-circle;
+    }
+
+    .ddm-search {
+        min-width: 15rem;
+    }
+
+    .chat-display {
+        ul {
+            li {
+                clear: both;
+
+                .chat-day {
+                    position: relative;
+                    text-align: center;
+                    margin-bottom: 24px;
+
+                    &::before {
+                        @include line-text;
+                    }
+
+                    span {
+                        background-color: white;
+                        position: relative;
+                        z-index: 1;
+                        padding: 6px 24px;
+                        user-select: none;
+                    }
+                }
+
+                &.right {
+                    .conversation-list {
+                        float: $r;
+                        text-align: $r;
+
+                        .dropdown {
+                            float: #{$l};
+                            margin-#{$r}: 8px;
+                        }
+
+                        .ctext-wrap {
+                            background-color: var(--bs-gray-100);
+                            border-radius: 8px 8px 0 8px;
+                        }
+                    }
+                }
+
+                &:last-child {
+                    .conversation-list {
+                        margin-bottom: 0;
+                    }
+                }
+
+                &.last-message {
+                    .conversation-list {
+                        &::after {
+                            content: "";
+                            font-family: "Font Awesome 5 Free";
+                            position: absolute;
+                            color: white;
+                            background-color: darken($lightenPrimary, 15%);
+                            font-weight: 900;
+                            #{$r}: -4px;
+                            bottom: 5px;
+                            font-size: 8px;
+                            width: 15px;
+                            height: 15px;
+                            border-radius: 50%;
+                            line-height: 15px;
+                            text-align: center;
+                        }
+                    }
+                }
+
+                .conversation-list {
+                    position: relative;
+                    margin-bottom: 24px;
+                    display: inline-block;
+
+                    .dropdown {
+                        float: #{$r};
+                        margin-#{$l}: 8px;
+
+                        a.dropdown-toggle {
+                            i {
+                                color: var(--bs-gray-600);
+                            }
+                        }
+                    }
+
+                    .ctext-wrap {
+                        background-color: lighten($lightenPrimary, 8%);
+                        padding: 12px 24px;
+                        border-radius: 8px 8px 8px 0;
+                        overflow: hidden;
+
+                        .conversation-name,
+                        .chat-time {
+                            user-select: none;
+                        }
+
+                        .conversation-name {
+                            color: $primary;
+                            margin-bottom: 2px;
+                            font-weight: bold;
+                        }
+
+                        p {
+                            color: var(--bs-gray-700);
+                        }
+
+                        .chat-time {
+                            font-size: 12px;
+
+                            i.fa-clock {
+                                font-size: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .chat-input-wrap {
+        .chat-input {
+            border: 0;
+            padding-#{$r}: 90px;
+        }
+
+        .chat-input-links {
+            ul {
+                #{$r}: 15px;
+            }
+        }
+    }
+}

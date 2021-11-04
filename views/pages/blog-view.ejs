@@ -1,0 +1,90 @@
+<% let length = 9 %>
+<!-- Top Section -->
+<div class="row">
+    <div class="col-12 justify-content-md-between d-md-flex">
+        <h5 class="title text-uppercase mb-0">blog view</h5>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item text-capitalize active" aria-current="page">
+                    <a href="/">dashboard</a>
+                </li>
+                <li class="breadcrumb-item text-capitalize" aria-current="page">
+                    blog view
+                </li>
+            </ol>
+        </nav>
+    </div>
+</div>
+<!-- bottom Section -->
+<div class="row mb-3 bl-view-modal">
+    <div class="col-lg-12">
+        <!-- inner top -->
+        <div class="card rounded shadow border-0">
+            <div class="card-body rounded-bottom rounded-1">
+                <div class="row mb-3">
+                    <div class="col-12 justify-content-md-between d-md-flex">
+                        <span class="text-uppercase">blogs number:</span>
+                        <span class="badge bg-primary ms-2" style="vertical-align: top;"><%= length %> </span>
+                    </div>
+                </div>
+                <div class="row gy-4">
+                    <% for(let index = 1; index <= length; index++ ) { %>
+                    <div class="col-xl-4 col-sm-6">
+                        <!-- Start inner Card or the cart self for bolg -->
+                        <div class="card shadow border border-light">
+                            <div class="card-body p-2 text-center">
+                                <div class="d-flex">
+                                    <div class="flex-shrink-0 me-2">
+                                        <!-- Logo -->
+                                        <div class="avater-logo mb-2">
+                                            <img src="/assets/img/avatar.png"
+                                                class="rounded-circle img-thumbnail img-fluid mb-1" alt="logo avater" />
+                                            <h6 class="text-muted mt-1">Blog Name <%= index %></h6>
+                                        </div>
+
+                                        <!-- Options -->
+                                        <div class="
+                                                settings">
+                                            <i class="fas font-sm fa-edit text-primary"></i>
+                                            <i class="fas font-sm fa-times-circle text-danger ms-1"></i>
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1 align-self-center">
+                                        <p class="text text-muted font-sm">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit...
+                                        </p>
+                                        <button type="button" class="btn btn-primary btn-sm anm-riple"
+                                            data-bs-toggle="modal" data-bs-target="#m-<%= index %>">
+                                            view blog <i class="fas fa-arrow-right font-xs ms-1"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modals -->
+<% for( let index = 1; index <= length; index++ ) { %>
+<div class="modal fade" id="m-<%= index %>" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+            <div class="modal-header shadow border-0 p-1">
+                <h5 class="modal-title">Blog Name <%= index %></h5>
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="fas fa-times-circle text-danger"></i>
+                </button>
+            </div>
+            <div class="modal-body p-0">
+                <!-- Page Desigining -->
+                <%- include("../partials/blog-designing.ejs",{index}) %>
+            </div>
+        </div>
+    </div>
+</div>
+<% } %>

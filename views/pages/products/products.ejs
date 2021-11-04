@@ -1,0 +1,211 @@
+<!-- Top Section -->
+<div class="row">
+    <div class="col-12 justify-content-md-between d-md-flex">
+        <h5 class="title text-uppercase mb-0">products</h5>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item text-capitalize active" aria-current="page">
+                    <a href="/">dashboard</a>
+                </li>
+                <li class="breadcrumb-item text-capitalize" aria-current="page">
+                    products
+                </li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<!-- Middle Section or Content -->
+
+<div class="row products-page">
+    <div class="col-lg-3">
+        <div class="card rounded shadow border-0 mb-3">
+            <div class="card-body rounded-bottom rounded-1">
+                <h5 class="card-title mb-4">Filter</h5>
+                <!-- Type Filter -->
+                <div>
+                    <h6 class="mb-2 text-secondary">Clothes</h6>
+                    <ul class="list-unstyled product-list-filter ps-2">
+                        <li><a href="javascript: void(0);" class="text-muted font-sm"><i
+                                    class="fas fa-chevron-right me-1 font-xs"></i> T-shirts</a></li>
+                        <li><a href="javascript: void(0);" class="text-muted font-sm"><i
+                                    class="fas fa-chevron-right me-1 font-xs"></i> Shirts</a></li>
+                        <li><a href="javascript: void(0);" class="text-muted font-sm"><i
+                                    class="fas fa-chevron-right me-1 font-xs"></i> Jeans</a></li>
+                        <li><a href="javascript: void(0);" class="text-muted font-sm"><i
+                                    class="fas fa-chevron-right me-1 font-xs"></i> Jackets</a></li>
+                    </ul>
+                </div>
+                <!-- Price -->
+                <div class="mt-4">
+                    <h6 class="mb-2 text-secondary">Price</h6>
+                    <form>
+                        <input type="range" class="form-range" min="5" value="150" step="5" max="1000" id="rangePrice">
+                        <div class="se-values d-flex justify-content-between">
+                            <span class="badge bg-light text-dark  font-xs min"></span>
+                            <span class="badge bg-primary text-light  font-xs result-range-price"></span>
+                            <span class="badge bg-light text-dark font-xs max"></span>
+                        </div>
+                    </form>
+                </div>
+                <!-- Discounts -->
+                <div class="mt-4">
+                    <h6 class="mb-2 text-secondary">Discount</h6>
+                    <div>
+                        <% for( let index = 1; index < 5; index++ ) { %>
+                        <div class="form-check <%= index == 4 ? "":"mb-2" %>">
+                            <input class="form-check-input" type="checkbox" id="discoundproduct<%= index %>">
+                            <label class="form-check-label text-muted" for="discoundproduct<%= index %>">
+                                More than <%= index*10 %>%
+                            </label>
+                        </div>
+                        <% } %>
+                    </div>
+                </div>
+                <!-- Rating -->
+                <div class="mt-4">
+                    <h6 class="mb-2 text-secondary">Customer Rating</h6>
+                    <div>
+                        <% for( let index = 4; index  > 0 ; index-- ) { %>
+                        <div class="form-check <%= index != 1 ? 'mb-2' : '' %>">
+                            <input class="form-check-input" type="checkbox" id="ratingid-<%= index %>">
+                            <label class="form-check-label align-text-top font-sm text-muted"
+                                for="ratingid-<%= index %>">
+                                <%= index %> <i class="fas fa-star text-warning"></i> <%= index != 1 ? '& Above' : '' %>
+                            </label>
+                        </div>
+                        <% } %>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- features -->
+        <div class="card shadow border-0 mb-custom">
+            <div class="card-body">
+                <div class="d-flex gap-3 justify-content-center flex-wrap">
+                    <div class="avatar-sm">
+                        <a href="/ecommerce/add-product"
+                            class="h-100 w-100 d-flex align-items-center text-secondary justify-content-center  bg-light rounded-circle">
+                            <i class="fas fa-plus font-sm"></i>
+                        </a>
+                    </div>
+                    <div class="avatar-sm">
+                        <a href="/ecommerce/shops"
+                            class="h-100 w-100 d-flex align-items-center text-secondary justify-content-center  bg-light rounded-circle">
+                            <i class="fas fa-store font-sm"></i>
+                        </a>
+                    </div>
+                    <div class="avatar-sm">
+                        <a href="/ecommerce/customers"
+                            class="h-100 w-100 d-flex align-items-center text-secondary justify-content-center  bg-light rounded-circle">
+                            <i class="fas fa-user-friends font-sm"></i>
+                        </a>
+                    </div>
+                    <div class="avatar-sm">
+                        <a href="/ecommerce/cart"
+                            class="h-100 w-100 d-flex align-items-center text-secondary justify-content-center  bg-light rounded-circle position-relative">
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger font-xs p-1">
+                                9+
+                            </span>
+                            <i class="fas fa-shopping-cart font-sm"></i>
+                        </a>
+                    </div>
+                    <div class="avatar-sm">
+                        <a href="/ecommerce/checkout"
+                            class="h-100 w-100 d-flex align-items-center text-secondary justify-content-center  bg-light rounded-circle">
+
+                            <i class="fas fa-money-bill font-sm"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-9">
+        <!-- Header Products -->
+        <div class="row mb-3 align-items-center">
+            <div class="col-lg-4 col-sm-6">
+                <div class="mt-2">
+                    <h5>Clothes</h5>
+                </div>
+            </div>
+            <div class="col-lg-8 col-sm-6">
+                <form class="mt-4 mt-sm-0 float-sm-end d-sm-flex align-items-center">
+                    <div class="search-box me-2">
+                        <div class="input-group input-group-sm d-flex">
+                            <button class="btn border-0 anm-riple bg-primary" type="button" id="search"><i
+                                    class="fas fa-search text-light font-xs"></i></button>
+                            <input type="text" class="form-control bg-white border-0" placeholder="Search.."
+                                aria-label="Example text with button addon" aria-describedby="search">
+                        </div>
+                    </div>
+                    <ul class="nav nav-pills justify-content-end mt-3 mt-sm-0">
+                        <li class="nav-item">
+                            <a class="nav-link py-0 px-1 me-1 active" href="#"><i class="fas fa-border-all"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link py-0 px-1" href="#"><i class="fas fa-list"></i></a>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+        <!-- Products Content -->
+        <div class="row g-3">
+            <% for( let index = 1; index <= 6; index++ ) { %>
+            <div class="col-xl-4 col-sm-6">
+                <div class="card rounded shadow border-0">
+                    <div class="card-body rounded-bottom rounded-1">
+                        <div class="product-img position-relative">
+                            <% if (index % 2 == 0) { %>
+                            <div class="product-ribbon position-absolute top-0 end-0">
+                                <span class="bg-primary rounded-circle ">
+                                    -<%= index+ 29 %>%
+                                </span>
+                            </div>
+                            <% } %>
+                            <img src=" <%= index % 2 == 0  ? `https://themesbrand.com/skote-django/layouts/assets/images/product/img-1.png` : `https://themesbrand.com/skote-django/layouts/assets/images/product/img-4.png` %>"
+                                alt="product" class="img-fluid mx-auto d-block">
+                        </div>
+                        <div class="mt-3 text-center">
+                            <h5 class="mb-2 text-truncate"><a href="javascript: void(0);" class="text-dark">Half sleeve
+                                    T-shirt </a></h5>
+
+                            <p class="text-muted mb-1">
+                                <i class="fas font-sm fa-star text-warning"></i>
+                                <i class="fas font-sm fa-star text-warning"></i>
+                                <i class="fas font-sm fa-star text-warning"></i>
+                                <i class="fas font-sm fa-star text-warning"></i>
+                                <i class="fas font-sm fa-star text-warning"></i>
+                            </p>
+                            <h6 class="my-0"><span class="text-muted me-2"><del
+                                        class="font-sm">$<%= index * 50 %></del></span>
+                                <b>$<%= index * 40 %></b></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <% } %>
+        </div>
+        <!-- Pagination -->
+        <div class="row">
+            <div class="col-lg-12">
+                <ul class="pagination pagination-rounded mt-3 p-1 justify-content-center">
+                    <li class="page-item disabled me-2">
+                        <a class="page-link rounded-0"> <i class="fas fa-arrow-left"></i> </a>
+                    </li>
+                    <% for( let index = 0; index < 5; index++ ) { %>
+                    <li class="page-item me-2 <%= index == 3 ? "active" : "" %>">
+                        <a class="page-link" href="javascript: void(0);"><%= index + 1 %> </a></li>
+                    <% } %>
+                    <li class="page-item">
+                        <a class="page-link rounded-0" href="javascript: void(0);"><i
+                                class="fas fa-arrow-right"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %> </title>
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" href="/favicon.png">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplebar/5.3.6/simplebar.min.css" />
+    <link rel="stylesheet" href="/css/libs/all.min.css">
+    <link rel="stylesheet" href="/css/libs/dropzone.css">
+    <link rel="stylesheet" href="/css/libs/bootstrap.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div aria-live="polite" aria-atomic="true" class="position-relative">
+        <div class="toast-container position-fixed end-0 p-3">
+        </div>
+    </div>
+    <div id="layout-wrap">
+        <!-- LN Top Navbar -->
+        <%- include ('../partials/navbars.ejs') %>
+        <!-- Top Navbar -->
+        <!-- LN Sidebar Nav -->
+        <%- include ("../partials/sidebar.ejs") %>
+        <!-- Sidebar Nav -->
+        <!-- Content Body -->
+        <div id="body-content">
+            <!-- Content itself Start -->
+            <div class="wrap-inner-body">
+                <div class="container-fluid">
+                    <%- body  %>
+                </div>
+            </div>
+            <!-- Content itself End -->
+
+            <!-- Start Footer -->
+            <footer id="main-footer" class="py-3 d-print-none">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <span class="text-secondary d-block mb-2 mb-sm-0 text-sm-start text-center font-sm">
+                                <%= new Date().getFullYear() %>
+                                &copy; <strong>AD</strong>. All rights reserved.
+                            </span>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="text-sm-end text-center text-secondary font-sm">
+                                Design & Develop by
+                                <a href="https://amrelmeslimany.github.io/my-portfolio/" class="text-dark"
+                                    target="_blank" rel="noopener noreferrer">Amr Elmeslimany</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- End Footer -->
+        </div>
+        <!-- Content Body -->
+    </div>
+    <!-- Scripts -->
+    <script src="/js/libs/bootstrap.bundle.min.js"></script>
+    <script src="/js/libs/apexcharts.min.js"></script>
+    <script src="/js/libs/dropzone.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplebar/5.3.6/simplebar.min.js"></script>
+    <script type="module" src="/js/libs/ckeditor.js"></script>
+    <script type="module" src="/js/app.js"></script>
+</body>
+
+</html>

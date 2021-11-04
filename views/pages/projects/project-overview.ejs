@@ -1,0 +1,196 @@
+<!-- Top Section -->
+<div class="row">
+    <div class="col-12 justify-content-md-between d-md-flex">
+        <h5 class="title text-uppercase mb-0">project overview</h5>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item text-capitalize active" aria-current="page">
+                    <a href="/projects">projects</a>
+                </li>
+                <li class="breadcrumb-item text-capitalize" aria-current="page">
+                    project overview
+                </li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+
+<!-- Middle content -->
+
+<div class="row">
+    <!-- Top Left side : Project Details -->
+    <div class="col-lg-8">
+        <div class="card border-0 shadow mb-4">
+            <div class="card-body">
+                <div class="d-flex">
+                    <div class="flex-shrink-0 me-4">
+                        <img src="/assets/img/aee-logo.png" alt="logo" class="avatar-vmd">
+                    </div>
+
+                    <div class="flex-grow-1 align-self-center overflow-hidden">
+                        <h6 class="text-truncate mb-0">AD Dashboard UI</h6>
+                        <p class="text-muted font-sm mb-0">Separate existence is a myth. For science, music, sport, etc.
+                        </p>
+                    </div>
+                </div>
+
+                <strong class="d-block mt-4 mb-2">Project Details :</strong>
+
+                <p class="text-muted">To an English person, it will seem like simplified English, as a skeptical
+                    Cambridge friend of mine told me what Occidental is. The European languages are members of the same
+                    family. Their separate existence is a myth. For science, music, sport, etc,</p>
+
+                <div class="text-muted mt-4">
+                    <p><i class="fas fa-chevron-right font-xs text-primary me-1"></i> To achieve this, it would
+                        be
+                        necessary
+                    </p>
+                    <p><i class="fas fa-chevron-right font-xs text-primary me-1"></i> Separate existence is a
+                        myth.</p>
+                    <p><i class="fas fa-chevron-right font-xs text-primary me-1"></i> If several languages
+                        coalesce</p>
+                </div>
+
+                <div class="row task-dates">
+                    <div class="col-sm-4 col-6">
+                        <div class="mt-4">
+                            <h6 class="font-sm"><i class="fas fa-calendar-alt me-1 text-primary"></i> Start Date
+                            </h6>
+                            <p class="text-muted mb-0 font-sm">08 Sept, 2019</p>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 col-6">
+                        <div class="mt-4">
+                            <h6 class="font-sm"><i class="fas fa-calendar-check me-1 text-primary"></i> Due
+                                Date
+                            </h6>
+                            <p class="text-muted mb-0 font-sm">12 Oct, 2019</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Top Right side : Project Team -->
+    <div class="col-lg-4">
+        <div class="card border-0 shadow mb-4">
+            <div class="card-body">
+                <h5 class="card-title mb-4">Team Members</h5>
+
+                <div class="table-responsive" data-simplebar style="max-height: 325px;">
+                    <table class="table align-middle table-nowrap mb-0">
+                        <tbody>
+                            <% for( let index = 0; index < 9; index++ ) { %>
+                            <tr>
+                                <td style="width: 50px;"><img src="https://source.unsplash.com/60x60/?man"
+                                        class="rounded-circle avatar-sm" alt="img"></td>
+                                <td>
+                                    <h6 class=" m-0"><a href="javascript: void(0);" class="text-dark">Amr Mohamed</a>
+                                    </h6>
+                                </td>
+                                <td>
+                                    <div>
+                                        <a href="javascript: void(0);"
+                                            class="badge bg-primary bg-opacity-10 text-primary">Frontend</a>
+                                        <a href="javascript: void(0);"
+                                            class="badge bg-primary bg-opacity-10 text-primary">UI</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="avatar-sm">
+                                        <span
+                                            class="h-100 w-100 d-flex align-items-center justify-content-center bg-opacity-50 bg-primary rounded-circle text-white">
+                                            A
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <h6 class=" m-0"><a href="javascript: void(0);" class="text-dark">Ali Ahmed</a>
+                                    </h6>
+                                </td>
+                                <td>
+                                    <div>
+                                        <a href="javascript: void(0);"
+                                            class="badge bg-primary bg-opacity-10 text-primary">Backend</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <% } %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Left : Overview Statistics -->
+    <div class="col-lg-4">
+        <div class="card border-0 shadow mb-3">
+            <div class="card-body position-relative">
+                <h6 class="card-title mb-4">Overview</h6>
+                <!-- Chart -->
+                <div id="project-overview-chart" style="min-height: 305px;"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Bottom Middle : Attatche files -->
+    <div class="col-lg-4">
+        <div class="card border-0 shadow mb-3">
+
+            <div class="card-body">
+                <h6 class="card-title mb-4">Attached Files</h6>
+                <div class="table-responsive" style="max-height: 305px;min-height: 305px;" data-simplebar>
+                    <table class="table table-nowrap align-middle table-hover mb-0">
+                        <tbody>
+                            <% for( let index = 0; index < 6; index++ ) { %>
+                            <tr>
+                                <td style="width: 45px;">
+                                    <div class="avatar-vmd">
+                                        <span
+                                            class="h-100 w-100 d-flex align-items-center justify-content-center bg-opacity-10 bg-primary rounded-circle text-primary">
+                                            <i class="fas fa-file-archive fa-lg"></i>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <h6 class=" mb-1"><a href="javascript: void(0);" class="text-dark">AD
+                                            Landing.Zip</a></h6>
+                                    <small>Size : 3.25 MB</small>
+                                </td>
+                                <td>
+                                    <div class="text-center">
+                                        <a href="javascript: void(0);" class="text-muted"><i
+                                                class="fas fa-download  fa-lg m-0"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <% } %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Bottom Right : Comments -->
+    <div class="col-lg-4">
+        <div class="card shadow border-0 mb-3">
+            <div class="card-body">
+                <h6 class="card-title mb-4">Comments</h6>
+                <!-- Comments -->
+                <div data-simplebar style="max-height: 264px;">
+                    <%- include ("../../partials/comments-sm.ejs") %>
+                </div>
+
+                <div class="text-center mt-1 pt-2">
+                    <a href="javascript: void(0);" class="btn btn-primary btn-sm anm-riple">View more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

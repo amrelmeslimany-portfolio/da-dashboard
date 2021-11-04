@@ -1,0 +1,117 @@
+<!-- Top Section -->
+<div class="row">
+    <div class="col-12 justify-content-md-between d-md-flex">
+        <h5 class="title text-uppercase mb-0">projects grid</h5>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item text-capitalize active" aria-current="page">
+                    <a href="/projects">projects</a>
+                </li>
+                <li class="breadcrumb-item text-capitalize" aria-current="page">
+                    projects grid
+                </li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+
+<!-- Middle Content -->
+<div class="row projects-grid g-4">
+    <% for( let index = 0; index < 9; index++ ) { %>
+    <div class="col-xl-4 col-sm-6">
+        <div class="card border-0 shadow">
+            <div class="card-body">
+                <div class="d-flex">
+
+                    <!-- Left Side -->
+                    <div class="flex-shrink-0 me-4 prg-leftside">
+                        <div class="avatar-md">
+                            <span class="rounded-circle bg-light">
+                                <img src="/assets/img/aee-logo.png" alt="person" height="40">
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Right Side -->
+                    <div class="flex-grow-1 overflow-hidden prg-rightside">
+                        <strong class=" text-truncate"><a href="javascript: void(0);" class="text-dark">New
+                                admin
+                                Design</a>
+                        </strong>
+                        <p class="text-muted mb-4 font-sm">It will be as simple as Occidental</p>
+                        <div class="avatar-group">
+
+                            <div class="avatar-group-item text-avatar">
+                                <a href="javascript: void(0);" class="d-inline-block">
+                                    <div class="avatar-sm">
+                                        <span
+                                            class=" h-100 w-100 d-flex align-items-center justify-content-center rounded-circle font-md">
+                                            A
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+                            <% for( let index = 0; index < 2; index++ ) { %>
+                            <div class="avatar-group-item">
+                                <a href="javascript: void(0);" class="d-inline-block">
+                                    <img src="https://source.unsplash.com/60x60/?person" alt="person"
+                                        class="rounded-circle avatar-sm">
+                                </a>
+                            </div>
+                            <% } %>
+                            <div class="avatar-group-item text-avatar">
+                                <a href="javascript: void(0);" class="d-inline-block">
+                                    <div class="avatar-sm">
+                                        <span
+                                            class=" h-100 w-100 d-flex align-items-center justify-content-center rounded-circle font-md">
+                                            <strong>4+</strong>
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="px-4 py-3 border-top">
+                <ul class="list-inline mb-0">
+                    <li class="list-inline-item font-sm me-2 align-text-top">
+                        <% if (index == 3) { %>
+                        <small class="badge bg-danger">Delay</small>
+                        <% } else { %>
+                        <small
+                            class="badge <%= index%2==0 ? "bg-success" : "bg-warning" %>"><%= index%2==0 ? "Completed" : "Pending" %></small>
+                        <% } %>
+                    </li>
+                    <li class="list-inline-item font-sm me-2">
+                        <i class="fas fa-calendar-alt me-1"></i> <%= (index + 2) * 8 %> Oct, 19
+                    </li>
+                    <li class="list-inline-item font-sm">
+                        <i class="far fa-comment-dots me-1"></i> <%= (index + 1) * 8 %>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <% } %>
+</div>
+
+
+<!-- Pagination -->
+<div class="row">
+    <div class="col-lg-12">
+        <ul class="pagination pagination-rounded mt-3 p-1 justify-content-center">
+            <li class="page-item disabled me-2">
+                <a class="page-link rounded-0"> <i class="fas fa-arrow-left"></i> </a>
+            </li>
+            <% for( let index = 0; index < 4; index++ ) { %>
+            <li class="page-item me-2 <%= index == 2 ? "active" : "" %>">
+                <a class="page-link" href="javascript: void(0);"><%= index + 1 %> </a></li>
+            <% } %>
+            <li class="page-item">
+                <a class="page-link rounded-0" href="javascript: void(0);"><i class="fas fa-arrow-right"></i></a>
+            </li>
+        </ul>
+    </div>
+</div>

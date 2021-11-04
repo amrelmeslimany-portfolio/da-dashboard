@@ -1,0 +1,64 @@
+// Riple Effect
+.anm-riple {
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+
+    i {
+        pointer-events: none;
+    }
+
+    span {
+        pointer-events: none;
+    }
+
+    .riple {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        z-index: 2;
+        pointer-events: none;
+        background-color: transparentize($color: #cecece, $amount: 0.4);
+        animation: btn-riple 0.5s linear;
+    }
+
+    &.dark-riple {
+        .riple {
+            background-color: transparentize($color: #2b2b2b, $amount: 0.4);
+        }
+    }
+}
+
+
+
+
+// Drop area
+
+.droparea {
+    height: 250px;
+    @include flex-center;
+    flex-direction: column;
+    border: 1px dashed var(--bs-gray-400) !important;
+    transition: 0.2s linear;
+    overflow: hidden;
+
+    img {
+        object-fit: cover;
+    }
+
+    &.active {
+        border: 2px solid $primary !important;
+
+        i,
+        h6 {
+            color: $primary !important;
+        }
+    }
+}
+
+
+
+/* Object Fit */
+.object-fit {
+    object-fit: cover;
+}

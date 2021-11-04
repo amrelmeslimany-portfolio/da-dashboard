@@ -1,0 +1,39 @@
+// Kaban Tasks
+.kanban-tasks {
+
+    #wr-task-upcoming,
+    #wr-task-inprogress,
+    #wr-task-completed {
+
+        .tasks-outer {
+            .task-box {
+                cursor: grab;
+                border: 1px solid $lightenGray;
+
+                &.drop-class {
+                    opacity: 0.5;
+                    border-style: dashed;
+                    background-color: var(--bs-gray-200);
+                }
+
+                &.dragging-item {
+                    background: black !important;
+                    opacity: 0.8 !important;
+                }
+            }
+
+        }
+    }
+}
+
+
+
+
+// Create New Task
+.ck-editor__editable_inline {
+    min-height: 200px;
+    height: 200px;
+    overflow-y: auto;
+    scroll-behavior: none;
+    @include custom-scrollbar();
+}
